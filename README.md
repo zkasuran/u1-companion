@@ -1,5 +1,7 @@
 # U1 Companion
 
+[![ci](https://github.com/zkasuran/u1-companion/actions/workflows/ci.yml/badge.svg)](https://github.com/zkasuran/u1-companion/actions/workflows/ci.yml)
+
 A Home Assistant integration for the Snapmaker U1, plus a simulator that lets
 you run the whole thing without a printer.
 
