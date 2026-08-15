@@ -14,10 +14,10 @@ tests/test_real_moonraker_capture.py .........................           [ 53%]
 tests/test_u1sim.py .................................................... [ 77%]
 ...............................................                          [100%]
 
-============================= 212 passed in 8.95s ==============================
+============================= 212 passed in 8.82s ==============================
 
 $ ruff check .
 All checks passed!
 
 $ ruff format --check .
-27 files already formatted
+28 files already formatted

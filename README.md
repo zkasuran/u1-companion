@@ -26,6 +26,23 @@ drives the integration's parsing with those captured bytes, and
 `scripts/ha_live_proof.py` puts a live Home Assistant through the config flow
 against that stack and checks all 82 entities. See Verification below.
 
+## What it looks like
+
+Four slots the way the printer reports them, plus one spool's whole NFC reading.
+
+| Slots | One tag, field by field |
+| --- | --- |
+| ![Four slots in Home Assistant](docs/img/05-four-slots.png) | ![The RFID reading for slot 0](docs/img/06-rfid-identity.png) |
+
+| The job | Setting it up |
+| --- | --- |
+| ![Print state, progress, layer, active tool, temperatures](docs/img/08-print-progress.png) | ![The config flow asking for the Moonraker host](docs/img/03-config-flow.png) |
+
+Every one of those is a browser against a real Home Assistant with a real
+Moonraker behind it, on simulated printer state. `docs/SCREENSHOTS.md` has the
+rest of the set, including the payload the container answered with and a colour
+remap landing live, plus the command that regenerates all of them.
+
 ## The gap this fills
 
 Home Assistant already has a Moonraker integration and it is a good one. It is
@@ -435,7 +452,7 @@ tables in `const.py`.
 | --- | --- |
 | `pytest` | 212 passed |
 | `ruff check .` | All checks passed |
-| `ruff format --check .` | 27 files already formatted |
+| `ruff format --check .` | 28 files already formatted |
 | hassfest, Home Assistant's own validator | 1 integration, 0 invalid |
 | `scripts/ha_entity_smoke.py` on Home Assistant 2025.1.4 | 81 entity descriptions evaluated against the real payload, 0 problems |
 | `scripts/prove-real-moonraker.sh` | 19 checks, all pass, 60 websocket pushes |
@@ -454,9 +471,11 @@ another that brings up the whole stack with Home Assistant in it.
 - Whether `filament_weight[i]` in sliced file metadata is logical colour `i`. The
   per slot gram estimates rest on that.
 - mDNS discovery, so there is no discovery step.
-- The Home Assistant UI itself. The config flow was driven over the HTTP API, not
-  through a browser, so how the dialog looks is unchecked. Its schema, its errors
-  and its translations are covered by hassfest.
+- Home Assistant's own behaviour beyond what the shots in `docs/img/` show. The
+  config flow dialog, the device page and the panels were captured from a browser
+  driven by `scripts/capture_screenshots.py`, so they are checked at that one
+  window size on one theme. Long term reliability, restarts and reconnects are
+  covered by the coordinator's tests rather than by a running instance.
 
 Reports from U1 owners are the missing piece, see `CONTRIBUTING.md`.
 
@@ -481,7 +500,7 @@ anything on physical hardware, because no U1 was used.
   simulator acceptance checklist.
 - `artifacts/`, what the real Moonraker fork actually returned, plus the raw
   output of every gate above.
-- `docs/SCREENSHOTS.md`, the shot list. No images are committed yet.
+- `docs/SCREENSHOTS.md`, every image in `docs/img/` and the command that made it.
 - `CONTRIBUTING.md`, how to set up and what the pull request bar is.
 - Upstream source: [Snapmaker/U1-Klipper](https://github.com/Snapmaker/U1-Klipper),
   [Snapmaker/U1-Moonraker](https://github.com/Snapmaker/U1-Moonraker),
