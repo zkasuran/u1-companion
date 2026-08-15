@@ -23,8 +23,8 @@ Two pieces in one repository:
 
 Both halves are checked against the real thing rather than against each other.
 `scripts/prove-real-moonraker.sh` runs Snapmaker's own unpatched Moonraker on the
-simulator and captures every byte it returns into `artifacts/`, the test suite
-drives the integration's parsing with those captured bytes, and
+simulator and captures every byte it returns into `artifacts/`, then the test suite
+drives the integration's parsing with those captured bytes.
 `scripts/ha_live_proof.py` puts a live Home Assistant through the config flow
 against that stack and checks all 82 entities. See Verification below.
 
@@ -71,6 +71,34 @@ caller asked for and returns whatever Klippy answered
 `components/klippy_connection.py:674`). So `print_task_config` and
 `filament_detect` are readable from a stock U1 with no firmware change and no
 config change.
+
+### What else is out there
+
+Three other things live in this space. All checked on 2026-08-15, in their own
+source rather than from their descriptions.
+
+- [`kbaker827/ha-snapmaker-u1`](https://github.com/kbaker827/ha-snapmaker-u1) is a
+  Home Assistant integration for the U1. It subscribes to `webhooks`,
+  `print_stats`, `virtual_sdcard` and `extruder` through `extruder3`, so it covers
+  the generic Klipper layer plus a camera and temperature numbers. Nothing in it
+  references `print_task_config` or `filament_detect`. Last commit 2026-03-30.
+- [`Nate-DUDV2/u1-dashboard`](https://github.com/Nate-DUDV2/u1-dashboard) is a
+  desktop app with a Home Assistant integration and its own cards. It does read
+  `print_task_config`, for two fields per slot, `filament_type` and
+  `filament_color_rgba`. Its README requires the printer to be running paxx12's
+  Extended Firmware.
+- [`rickkollins/Snapmaker-U1-Card`](https://github.com/rickkollins/Snapmaker-U1-Card)
+  is a Lovelace card, a good looking one. It reads AFC Lite `AFC_lane` objects,
+  which is again a modded firmware.
+
+None of the three reads three things: `filament_detect`, the NFC identity the machine
+already publishes; `extruder_map_table`, how 32 logical colours land on 4 heads; or
+`filament_official`. This project reads all of it on stock firmware with
+nothing installed on the printer. It is also the only one of the four that ships a
+simulator, so its parsing is tested against bytes a real Moonraker returned.
+
+One practical warning. All three integrations, this one included, use the Home
+Assistant domain `snapmaker_u1`, so only one of them can be installed at a time.
 
 ## Architecture
 
