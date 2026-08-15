@@ -1,0 +1,38 @@
+{
+  "result": {
+    "objects": [
+      "webhooks",
+      "configfile",
+      "print_task_config",
+      "filament_detect",
+      "print_stats",
+      "virtual_sdcard",
+      "display_status",
+      "pause_resume",
+      "idle_timeout",
+      "toolhead",
+      "gcode_move",
+      "heater_bed",
+      "heaters",
+      "temperature_sensor cavity",
+      "fan",
+      "fan_generic cavity_fan",
+      "led cavity_led",
+      "exception_manager",
+      "machine_state_manager",
+      "extruder",
+      "filament_motion_sensor e0_filament",
+      "extruder1",
+      "filament_motion_sensor e1_filament",
+      "extruder2",
+      "filament_motion_sensor e2_filament",
+      "extruder3",
+      "filament_motion_sensor e3_filament",
+      "fan_generic e1_fan",
+      "fan_generic e2_fan",
+      "fan_generic e3_fan",
+      "filament_feed left",
+      "filament_feed right"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "create_entry",
+  "flow_id": "01M01XC052K2NRHJ7EDKSSPA1W",
+  "handler": "snapmaker_u1",
+  "description": null,
+  "description_placeholders": null,
+  "title": "u1sim",
+  "minor_version": 1,
+  "options": {},
+  "subentries": [],
+  "version": 1,
+  "result": {
+    "created_at": 1786770751.679041,
+    "entry_id": "01M01XC05ZAYG4FQ1KB551P8JV",
+    "domain": "snapmaker_u1",
+    "modified_at": 1786770751.679043,
+    "title": "u1sim",
+    "source": "user",
+    "state": "loaded",
+    "supports_options": false,
+    "supports_remove_device": false,
+    "supports_unload": true,
+    "supports_reconfigure": false,
+    "supported_subentry_types": {},
+    "pref_disable_new_entities": false,
+    "pref_disable_polling": false,
+    "disabled_by": null,
+    "reason": null,
+    "error_reason_translation_key": null,
+    "error_reason_translation_placeholders": null,
+    "num_subentries": 0
+  }
+}

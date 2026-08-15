@@ -1,0 +1,158 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+          pip install -e .
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Format check
+        run: ruff format --check .
+
+      - name: Test
+        run: pytest
+
+  hassfest:
+    # Home Assistant's own validator for a custom integration: the manifest,
+    # the services file, the translations and the config flow.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: home-assistant/actions/hassfest@master
+
+  entities:
+    # The pytest suite imports no Home Assistant, so this job is what covers
+    # the entity layer. It evaluates every entity against the captured real
+    # Moonraker payload in artifacts/real-moonraker.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install Home Assistant
+        run: |
+          python -m pip install --upgrade pip
+          pip install homeassistant
+
+      - name: Evaluate every entity against the real payload
+        run: python scripts/ha_entity_smoke.py
+
+  simulator-with-real-moonraker:
+    # The end to end proof, run for real on every push: the unmodified
+    # Snapmaker Moonraker fork on top of u1sim, then the capture script's own
+    # checks against what comes back. The committed capture in
+    # artifacts/real-moonraker is what the test suite reads; this job proves it
+    # can still be reproduced.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: u1-companion
+
+      - name: Clone the Snapmaker Moonraker fork
+        uses: actions/checkout@v4
+        with:
+          repository: Snapmaker/U1-Moonraker
+          path: u1-moonraker
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install the capture client
+        run: pip install aiohttp
+
+      - name: Run the fork against the simulator and capture what it returns
+        working-directory: u1-companion
+        env:
+          MOONRAKER_SRC: ${{ github.workspace }}/u1-moonraker
+          MOONRAKER_VENV: ${{ github.workspace }}/mrvenv
+        run: scripts/prove-real-moonraker.sh --seconds 32
+
+      - name: Check the fresh capture against the committed one
+        working-directory: u1-companion
+        run: pytest tests/test_real_moonraker_capture.py -q
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: real-moonraker-capture
+          path: u1-companion/artifacts/real-moonraker
+
+  home-assistant-live:
+    # The whole stack, driven end to end: the simulator, the unmodified
+    # Moonraker fork, then a real Home Assistant that runs the config flow and
+    # creates the entities. The script asserts the values, not just that
+    # something appeared.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone the Snapmaker Moonraker fork
+        uses: actions/checkout@v4
+        with:
+          repository: Snapmaker/U1-Moonraker
+          path: vendor/u1-moonraker
+
+      - name: Bring the pair up in containers and capture what they return
+        run: scripts/prove-docker-compose.sh
+
+      - name: Add Home Assistant
+        run: docker compose --profile ha up -d
+
+      - name: Onboard Home Assistant, run the config flow, check every entity
+        run: python3 scripts/ha_live_proof.py --settle 20
+
+      - name: Collect the logs whatever happened
+        if: always()
+        run: |
+          mkdir -p artifacts/ci-logs
+          docker compose --profile ha logs --no-color > artifacts/ci-logs/compose.log 2>&1 || true
+          docker compose --profile ha ps > artifacts/ci-logs/compose-ps.txt 2>&1 || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: home-assistant-live
+          path: |
+            artifacts/home-assistant
+            artifacts/docker-compose
+            artifacts/ci-logs

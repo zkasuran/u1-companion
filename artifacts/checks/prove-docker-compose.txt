@@ -1,0 +1,118 @@
+== docker compose up -d --build
+ Image u1-companion-u1sim Building 
+ Image u1-companion-moonraker Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.14kB done
+#1 DONE 0.0s
+
+#2 [moonraker internal] load build definition from Dockerfile.moonraker
+#2 transferring dockerfile: 1.72kB done
+#2 DONE 0.0s
+
+#3 [u1sim internal] load build definition from Dockerfile.u1sim
+#3 transferring dockerfile: 962B done
+#3 DONE 0.0s
+
+#4 [u1sim internal] load metadata for docker.io/library/python:3.11-slim
+#4 DONE 1.0s
+
+#5 [moonraker internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [moonraker 1/7] FROM docker.io/library/python:3.11-slim@sha256:a630a63cdb314e2d138a2fca3e375e319e8568346ffafac5b980f888630ac4f1
+#6 resolve docker.io/library/python:3.11-slim@sha256:a630a63cdb314e2d138a2fca3e375e319e8568346ffafac5b980f888630ac4f1 0.0s done
+#6 DONE 0.0s
+
+#7 [moonraker internal] load build context
+#7 transferring context: 182B done
+#7 DONE 0.0s
+
+#8 [u1sim internal] load build context
+#8 transferring context: 891B done
+#8 DONE 0.0s
+
+#9 [u1sim 3/4] COPY u1sim ./u1sim
+#9 CACHED
+
+#10 [u1sim 2/4] WORKDIR /opt/u1-companion
+#10 CACHED
+
+#11 [moonraker 4/7] RUN pip install --no-cache-dir -r /tmp/requirements-moonraker.txt
+#11 CACHED
+
+#12 [moonraker 3/7] COPY docker/requirements-moonraker.txt /tmp/requirements-moonraker.txt
+#12 CACHED
+
+#13 [moonraker 6/7] COPY docker/healthcheck-moonraker.py /usr/local/bin/healthcheck-moonraker.py
+#13 CACHED
+
+#14 [moonraker 2/7] RUN apt-get update     && apt-get install --no-install-recommends -y libsodium23 iproute2     && rm -rf /var/lib/apt/lists/*
+#14 CACHED
+
+#15 [moonraker 5/7] COPY docker/entrypoint-moonraker.sh /usr/local/bin/entrypoint-moonraker.sh
+#15 CACHED
+
+#16 [u1sim 4/4] RUN mkdir -p /run/klippy /data/gcodes /data/logs /data/config
+#16 CACHED
+
+#17 [moonraker 7/7] RUN chmod +x /usr/local/bin/entrypoint-moonraker.sh /usr/local/bin/healthcheck-moonraker.py
+#17 CACHED
+
+#18 [u1sim] exporting to image
+#18 exporting layers done
+#18 exporting manifest sha256:e728cc5af2f1537d65daee02a6dc69f91900a55d46f7a6dc8fe6a2869324e01b done
+#18 exporting config sha256:8073c2ff689aaf426ad2a4ea3e55fa0fecfc180f9e8233a002dfba9b6ebb8ba9 done
+#18 exporting attestation manifest sha256:3b9aa6a6560b736bb0ec60dacef8c0110b1e10cbda8883d4952ea14564d4e4a3 0.0s done
+#18 exporting manifest list sha256:3e12d834e77e324f96aaf44b80dc1864b759197ea18a904bbe00f45e42169530 done
+#18 naming to docker.io/library/u1-companion-u1sim:latest done
+#18 unpacking to docker.io/library/u1-companion-u1sim:latest done
+#18 DONE 0.0s
+
+#19 [moonraker] exporting to image
+#19 exporting layers done
+#19 exporting manifest sha256:941293ea543855d6fc4f7e370c04e52b158e96ed551a02486f0a450b17a50a12 done
+#19 exporting config sha256:466fc1068c1090f33401893339f62a3fa78ea7c59b5a86dd81bbf4fbb8d15adc done
+#19 exporting attestation manifest sha256:78dabba08c6ccb7983a1dbaf64364142a583353e90e25aa185e73c8fa9303fa0 0.0s done
+#19 exporting manifest list sha256:b91b98b7f24863ad8fec291f409c88293220373a0003b62efcc82bdf21ebb2d3 done
+#19 naming to docker.io/library/u1-companion-moonraker:latest done
+#19 unpacking to docker.io/library/u1-companion-moonraker:latest done
+#19 DONE 0.0s
+
+#20 [u1sim] resolving provenance for metadata file
+#20 DONE 0.0s
+
+#21 [moonraker] resolving provenance for metadata file
+#21 DONE 0.0s
+ Image u1-companion-u1sim Built 
+ Image u1-companion-moonraker Built 
+ Network u1-companion_default Creating 
+ Network u1-companion_default Created 
+ Volume u1-companion_klippy-comms Creating 
+ Volume u1-companion_klippy-comms Created 
+ Volume u1-companion_printer-data Creating 
+ Volume u1-companion_printer-data Created 
+ Container u1sim Creating 
+ Container u1sim Created 
+ Container u1-moonraker Creating 
+ Container u1-moonraker Created 
+ Container u1sim Starting 
+ Container u1sim Started 
+ Container u1-moonraker Starting 
+ Container u1-moonraker Started 
+== waiting for Moonraker's healthcheck
+== healthy 5s after up
+== waiting for the simulated job to be running
+== capturing
+PASS Moonraker is healthy behind a ready Klippy
+PASS klippy_connected
+PASS no failed Moonraker components
+PASS no Moonraker startup warnings
+PASS no missing klippy requirements
+PASS print_task_config listed
+PASS filament_detect listed
+PASS all four slots are loaded
+PASS no slot is still at the empty default
+PASS extruder_map_table has 32 entries
+32 printer objects, healthy 5s after up
+== artifacts in /home/asuran/Downloads/hackathon-hq/work/snapmaker-u1/u1-companion/artifacts/docker-compose

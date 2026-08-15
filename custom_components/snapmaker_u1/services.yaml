@@ -1,0 +1,77 @@
+set_color_map:
+  fields:
+    config_entry_id:
+      required: false
+      selector:
+        config_entry:
+          integration: snapmaker_u1
+    logical:
+      required: true
+      example: 5
+      selector:
+        number:
+          min: 0
+          max: 31
+          mode: box
+    head:
+      required: true
+      example: 2
+      selector:
+        number:
+          min: 0
+          max: 3
+          mode: box
+
+set_filament:
+  fields:
+    config_entry_id:
+      required: false
+      selector:
+        config_entry:
+          integration: snapmaker_u1
+    slot:
+      required: true
+      example: 3
+      selector:
+        number:
+          min: 0
+          max: 3
+          mode: box
+    vendor:
+      required: true
+      example: Generic
+      selector:
+        text:
+    filament_type:
+      required: true
+      example: PLA
+      selector:
+        text:
+    sub_type:
+      required: true
+      example: Silk
+      selector:
+        text:
+    color:
+      required: false
+      example: 1E88E5
+      selector:
+        text:
+    force:
+      required: false
+      default: false
+      selector:
+        boolean:
+
+send_gcode:
+  fields:
+    config_entry_id:
+      required: false
+      selector:
+        config_entry:
+          integration: snapmaker_u1
+    script:
+      required: true
+      example: GET_PRINT_EXTRUDER_MAP
+      selector:
+        text:

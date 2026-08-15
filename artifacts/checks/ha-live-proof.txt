@@ -1,0 +1,56 @@
+== waiting for Home Assistant
+== onboarding
+== running the config flow
+  flow 01M01XC052K2NRHJ7EDKSSPA1W at step 'user'
+wrote artifacts/home-assistant/config-flow-result.json (897 bytes)
+== letting the coordinator run for 20s
+== waiting for the scenario to be mid print
+  printing after 0.0s: print_state printing, progress 11.8, layer 29
+wrote artifacts/home-assistant/config-entries.json (635 bytes)
+wrote artifacts/home-assistant/entity-states.json (48567 bytes)
+wrote artifacts/home-assistant/entity-states.txt (5324 bytes)
+wrote artifacts/home-assistant/ha-version.json (3345 bytes)
+PASS the config flow created an entry
+PASS the entry loaded
+PASS 82 entities were created
+PASS no entity is unavailable
+PASS only the expected entities read unknown
+PASS sensor.u1sim_slot_0_filament is PLA
+PASS sensor.u1sim_slot_1_filament is PLA
+PASS sensor.u1sim_slot_2_filament is PETG
+PASS sensor.u1sim_slot_3_filament is PLA
+PASS sensor.u1sim_slot_0_vendor is Snapmaker
+PASS sensor.u1sim_slot_3_vendor is Generic
+PASS sensor.u1sim_slot_0_color is #000000
+PASS sensor.u1sim_slot_1_color is #F5F0E1
+PASS sensor.u1sim_slot_2_color is #D3232A
+PASS sensor.u1sim_slot_3_color is #1E88E5
+PASS sensor.u1sim_slot_0_spool_weight is 1000
+PASS sensor.u1sim_slot_0_tag_manufactured is 20260114
+PASS sensor.u1sim_slot_0_scan_state is idle
+PASS binary_sensor.u1sim_slot_0_official_spool is on
+PASS binary_sensor.u1sim_slot_3_official_spool is off
+PASS binary_sensor.u1sim_slot_0_filament_present is on
+PASS sensor.u1sim_print_state is printing
+PASS sensor.u1sim_machine_state is printing
+PASS sensor.u1sim_current_file is u1-four-color-demo.gcode
+PASS sensor.u1sim_klipper_state is ready
+PASS select.u1sim_entangle_detection_sensitivity is medium
+PASS switch.u1sim_auto_replenish_filament is on
+PASS switch.u1sim_replenish_ignoring_color is off
+PASS sensor.u1sim_bed_temperature attribute target is 60.0
+PASS sensor.u1sim_layer attribute total is 240
+PASS sensor.u1sim_slot_3_color attribute color_count is 2
+PASS sensor.u1sim_slot_3_color attribute gradient is True
+PASS sensor.u1sim_slot_0_color attribute color_mismatch is False
+PASS sensor.u1sim_slot_0_vendor attribute sku is 12001
+PASS sensor.u1sim_slot_0_job_filament_estimated attribute source is slicer_estimate
+PASS sensor.u1sim_progress is 11.8 in 0.1 to 100.0
+PASS sensor.u1sim_bed_temperature is 59.84 in 20.0 to 65.0
+PASS sensor.u1sim_head_2_nozzle_temperature is 247.43 in 20.0 to 255.0
+PASS sensor.u1sim_filament_used is 1015.338 in 1.0 to 20000.0
+PASS sensor.u1sim_layer is 29.0 in 1 to 240
+PASS sensor.u1sim_active_tool is 1.0 in 0 to 3
+PASS sensor.u1sim_slot_0_assigned_colors is 27.0 in 1 to 32
+82 entities: binary_sensor 14, button 4, select 1, sensor 59, switch 4
+unknown: sensor.u1sim_slot_0_job_filament_estimated, sensor.u1sim_slot_1_job_filament_estimated, sensor.u1sim_slot_2_job_filament_estimated, sensor.u1sim_slot_3_drying_temperature, sensor.u1sim_slot_3_job_filament_estimated, sensor.u1sim_slot_3_recommended_nozzle_temperature, sensor.u1sim_slot_3_spool_weight, sensor.u1sim_slot_3_tag_manufactured

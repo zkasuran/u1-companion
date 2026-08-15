@@ -1,0 +1,154 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Snapmaker U1",
+        "description": "Enter the address of the printer's Moonraker. The integration checks that the printer publishes print_task_config, which is the U1 multicolor state.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "api_key": "API key",
+          "use_ssl": "Use SSL"
+        },
+        "data_description": {
+          "api_key": "Only needed when the printer's Moonraker does not trust this client's address.",
+          "use_ssl": "Only when Moonraker sits behind an HTTPS proxy."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach Moonraker at that address.",
+      "invalid_auth": "Moonraker rejected the API key.",
+      "klippy_not_ready": "Moonraker answered but Klipper is not ready. Start the printer, then try again.",
+      "not_u1": "That printer does not publish print_task_config, so it is not a Snapmaker U1.",
+      "unknown": "Unexpected error. Check the log."
+    },
+    "abort": {
+      "already_configured": "This printer is already set up."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "print_state": { "name": "Print state" },
+      "progress": { "name": "Progress" },
+      "current_file": { "name": "Current file" },
+      "layer": { "name": "Layer" },
+      "print_duration": { "name": "Print duration" },
+      "total_duration": { "name": "Total duration" },
+      "filament_used": { "name": "Filament used" },
+      "active_tool": { "name": "Active tool" },
+      "bed_temperature": { "name": "Bed temperature" },
+      "klippy_state": { "name": "Klipper state" },
+      "machine_state": { "name": "Machine state" },
+      "slot_filament": { "name": "Slot {slot} filament" },
+      "slot_vendor": { "name": "Slot {slot} vendor" },
+      "slot_color": { "name": "Slot {slot} color" },
+      "slot_assigned_colors": { "name": "Slot {slot} assigned colors" },
+      "slot_job_filament": { "name": "Slot {slot} job filament, estimated" },
+      "slot_spool_weight": { "name": "Slot {slot} spool weight" },
+      "slot_drying_temperature": { "name": "Slot {slot} drying temperature" },
+      "slot_recommended_nozzle_temperature": { "name": "Slot {slot} recommended nozzle temperature" },
+      "slot_tag": { "name": "Slot {slot} tag manufactured" },
+      "slot_scan_state": { "name": "Slot {slot} scan state" },
+      "head_nozzle_temperature": { "name": "Head {head} nozzle temperature" },
+      "head_dock_state": { "name": "Head {head} dock state" }
+    },
+    "binary_sensor": {
+      "paused": { "name": "Paused" },
+      "exception": { "name": "Exception" },
+      "slot_filament_present": { "name": "Slot {slot} filament present" },
+      "slot_in_use": { "name": "Slot {slot} in use" },
+      "slot_official_tag": { "name": "Slot {slot} official spool" }
+    },
+    "switch": {
+      "auto_replenish_filament": { "name": "Auto replenish filament" },
+      "filament_entangle_detect": { "name": "Filament entangle detection" },
+      "replenish_ignore_color": { "name": "Replenish ignoring color" },
+      "end_led_turn_off": { "name": "Turn off LED at the end" }
+    },
+    "select": {
+      "filament_entangle_sen": {
+        "name": "Entangle detection sensitivity",
+        "state": {
+          "low": "Low",
+          "medium": "Medium",
+          "high": "High"
+        }
+      }
+    },
+    "button": {
+      "pause": { "name": "Pause" },
+      "resume": { "name": "Resume" },
+      "cancel": { "name": "Cancel" },
+      "emergency_stop": { "name": "Emergency stop" }
+    }
+  },
+  "services": {
+    "set_color_map": {
+      "name": "Set color map",
+      "description": "Map a logical color onto a physical head. The printer refuses this while it is printing or paused.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Printer",
+          "description": "Which printer to write to. Only needed when more than one is set up."
+        },
+        "logical": {
+          "name": "Logical color",
+          "description": "Color index 0 to 31, the number a sliced file uses."
+        },
+        "head": {
+          "name": "Head",
+          "description": "Physical head 0 to 3 that should print that color."
+        }
+      }
+    },
+    "set_filament": {
+      "name": "Set filament",
+      "description": "Write a filament identity into one slot by hand. This clears the slot's official flag and its SKU, because the identity is no longer the one from the tag.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Printer",
+          "description": "Which printer to write to. Only needed when more than one is set up."
+        },
+        "slot": {
+          "name": "Slot",
+          "description": "Physical slot 0 to 3."
+        },
+        "vendor": {
+          "name": "Vendor",
+          "description": "Brand name, for example Generic."
+        },
+        "filament_type": {
+          "name": "Filament type",
+          "description": "Material, for example PLA or PETG."
+        },
+        "sub_type": {
+          "name": "Sub type",
+          "description": "Variant, for example Basic, Matte, Silk or HF."
+        },
+        "color": {
+          "name": "Color",
+          "description": "RRGGBB or RRGGBBAA hex. A leading # is fine."
+        },
+        "force": {
+          "name": "Force",
+          "description": "Needed to overwrite a slot that holds an official spool."
+        }
+      }
+    },
+    "send_gcode": {
+      "name": "Send G-code",
+      "description": "Run one G-code command on the printer.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Printer",
+          "description": "Which printer to write to. Only needed when more than one is set up."
+        },
+        "script": {
+          "name": "Script",
+          "description": "The G-code to run."
+        }
+      }
+    }
+  }
+}

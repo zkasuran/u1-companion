@@ -1,0 +1,4 @@
+$ docker compose ps
+NAME           IMAGE                    COMMAND                  SERVICE     CREATED          STATUS                    PORTS
+u1-moonraker   u1-companion-moonraker   "/usr/local/bin/entr…"   moonraker   26 seconds ago   Up 26 seconds (healthy)   0.0.0.0:7125->7125/tcp, [::]:7125->7125/tcp
+u1sim          u1-companion-u1sim       "python -m u1sim --s…"   u1sim       26 seconds ago   Up 26 seconds             

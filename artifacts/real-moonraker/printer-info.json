@@ -1,0 +1,16 @@
+{
+  "result": {
+    "state": "ready",
+    "state_message": "Printer is ready",
+    "hostname": "u1sim",
+    "klipper_path": "/home/asuran/Downloads/hackathon-hq/work/snapmaker-u1/u1-companion",
+    "python_path": "/home/asuran/.pyenv/versions/3.11.5/bin/python3",
+    "process_id": 446967,
+    "user_id": 1000,
+    "group_id": 1000,
+    "log_file": "/tmp/u1-companion-proof/data/logs/klippy.log",
+    "config_file": "/tmp/u1-companion-proof/data/config/printer.cfg",
+    "software_version": "v0.12.0-u1sim",
+    "cpu_info": "u1sim simulated host"
+  }
+}

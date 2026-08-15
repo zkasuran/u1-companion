@@ -1,0 +1,13 @@
+{
+  "domain": "snapmaker_u1",
+  "name": "Snapmaker U1",
+  "codeowners": ["@zkasuran"],
+  "config_flow": true,
+  "documentation": "https://github.com/zkasuran/u1-companion/blob/main/README.md",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/zkasuran/u1-companion/issues",
+  "requirements": [],
+  "single_config_entry": false,
+  "version": "0.1.0"
+}

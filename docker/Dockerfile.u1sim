@@ -1,0 +1,24 @@
+# The simulator. Standard library only, so there is nothing to install.
+FROM python:3.11-slim
+
+LABEL org.opencontainers.image.title="u1sim"
+LABEL org.opencontainers.image.description="Fake Klippy host speaking the Snapmaker U1 API"
+LABEL org.opencontainers.image.licenses="MIT"
+
+WORKDIR /opt/u1-companion
+COPY u1sim ./u1sim
+
+ENV PYTHONUNBUFFERED=1
+ENV U1SIM_SOCKET=/run/klippy/klippy.sock
+ENV U1SIM_SCENARIO=four_color_print
+ENV U1SIM_GCODE_PATH=/data/gcodes
+ENV U1SIM_CONFIG_FILE=/data/config/printer.cfg
+ENV U1SIM_LOG_FILE=/data/logs/klippy.log
+
+# The socket directory and the shared Klipper data directory. Both are volumes
+# in docker-compose.yml, so these are only here for a bare docker run. The
+# socket itself is created 0660 (u1sim/server.py:208) and both containers run as
+# root, so Moonraker can open it.
+RUN mkdir -p /run/klippy /data/gcodes /data/logs /data/config
+
+ENTRYPOINT ["python", "-m", "u1sim"]

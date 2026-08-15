@@ -1,0 +1,8 @@
+# Development and CI dependencies.
+# The simulator itself runs on the standard library. Everything here is for
+# testing and linting. Versions are pinned to what the test suite was run
+# against.
+pytest==9.0.3
+pytest-asyncio==1.3.0
+aiohttp==3.13.5
+ruff==0.15.18

@@ -1,0 +1,5 @@
+$ python scripts/ha_entity_smoke.py   (Home Assistant 2025.1.4, Python 3.12.3)
+real printing: 81 entities evaluated
+real idle: 81 entities evaluated
+nothing read yet: 50 entities evaluated
+81 descriptions, 0 problems

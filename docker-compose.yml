@@ -1,0 +1,92 @@
+# The whole stack with no printer: u1sim as the Klippy, the unmodified
+# Snapmaker Moonraker fork on top of it, then Home Assistant talking to that.
+#
+# Moonraker is not vendored here. Clone the fork first, next to this file:
+#
+#   git clone https://github.com/Snapmaker/U1-Moonraker vendor/u1-moonraker
+#   docker compose up -d
+#   curl -s localhost:7125/printer/objects/query?print_task_config | python3 -m json.tool
+#
+# Point MOONRAKER_SRC somewhere else if the checkout lives elsewhere. The source
+# is bind mounted read only, so what runs is provably the checkout on disk.
+#
+#   MOONRAKER_SRC=../_recon/u1-moonraker docker compose up -d
+#
+# Home Assistant is optional. It is in the "ha" profile so the pair can be
+# brought up on its own:
+#
+#   docker compose --profile ha up -d      # adds Home Assistant on :8123
+
+services:
+  u1sim:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.u1sim
+    container_name: u1sim
+    command:
+      - --socket=/run/klippy/klippy.sock
+      - --scenario=${U1SIM_SCENARIO:-four_color_print}
+      - --speed=${U1SIM_SPEED:-1.0}
+      - --gcode-path=/data/gcodes
+      # Moonraker warns when the Klipper config it is told about sits outside
+      # its own config folder (file_manager.py:269-282), so the path reported
+      # here points into the data volume the two share.
+      - --config-file=/data/config/printer.cfg
+      - --log-file=/data/logs/klippy.log
+    volumes:
+      - klippy-comms:/run/klippy
+      - printer-data:/data
+    restart: unless-stopped
+
+  moonraker:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.moonraker
+    container_name: u1-moonraker
+    depends_on:
+      - u1sim
+    ports:
+      - "7125:7125"
+    volumes:
+      # The fork itself, unpatched and read only.
+      - ${MOONRAKER_SRC:-./vendor/u1-moonraker}:/opt/moonraker:ro
+      - ./docker/moonraker.conf:/config/moonraker.conf:ro
+      - klippy-comms:/run/klippy
+      - printer-data:/data
+    environment:
+      MOONRAKER_DATA_PATH: /data
+      MOONRAKER_CONFIG_PATH: /config/moonraker.conf
+      MOONRAKER_TMP_DIR: /tmp/moonraker
+    healthcheck:
+      # Healthy means Moonraker answered and its Klippy is ready, see
+      # docker/healthcheck-moonraker.py.
+      test: ["CMD", "/usr/local/bin/healthcheck-moonraker.py"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    restart: unless-stopped
+
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: u1-homeassistant
+    profiles: ["ha"]
+    depends_on:
+      moonraker:
+        condition: service_healthy
+    ports:
+      - "8123:8123"
+    volumes:
+      - ha-config:/config
+      # The integration is mounted live, so an edit needs a Home Assistant
+      # restart rather than a rebuild.
+      - ./custom_components/snapmaker_u1:/config/custom_components/snapmaker_u1:ro
+    restart: unless-stopped
+
+volumes:
+  # The Klippy socket. Both containers open it, which is the whole point.
+  klippy-comms:
+  # One data directory for both, the way a real U1 has a single printer_data
+  # holding the gcodes, the Klipper config and Moonraker's database.
+  printer-data:
+  ha-config:

@@ -1,0 +1,28 @@
+$ docker run --rm -v $PWD:/github/workspace ghcr.io/home-assistant/hassfest:latest
+Validating application_credentials... done in 0.00s
+Validating bluetooth... done in 0.00s
+Validating codeowners... done in 0.00s
+Validating conditions... done in 0.00s
+Validating config_schema... done in 0.00s
+Validating dependencies... done in 0.31s
+Validating dhcp... done in 0.00s
+Validating icons... done in 0.00s
+Validating integration_info... done in 0.00s
+Validating integration_type... done in 0.00s
+Validating json... done in 0.00s
+Validating labs... done in 0.00s
+Validating manifest... done in 0.00s
+Validating mqtt... done in 0.00s
+Validating quality_scale... done in 0.00s
+Validating requirements... done in 0.00s
+Validating services... done in 0.00s
+Validating ssdp... done in 0.00s
+Validating translations... done in 0.01s
+Validating triggers... done in 0.00s
+Validating usb... done in 0.00s
+Validating zeroconf... done in 0.00s
+Validating config_flow... done in 0.00s
+
+Integrations: 1
+Invalid integrations: 0
+

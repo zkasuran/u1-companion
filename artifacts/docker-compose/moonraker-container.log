@@ -1,0 +1,262 @@
+u1-moonraker  | u1-companion: starting Moonraker from /opt/moonraker
+u1-moonraker  | ERROR:root:Error Retreiving Git Repo Info
+u1-moonraker  | Traceback (most recent call last):
+u1-moonraker  |   File "/opt/moonraker/moonraker/utils/__init__.py", line 102, in get_repo_info
+u1-moonraker  |     repo_info["software_version"] = retrieve_git_version(source_path)
+u1-moonraker  |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+u1-moonraker  |   File "/opt/moonraker/moonraker/utils/__init__.py", line 83, in retrieve_git_version
+u1-moonraker  |     ver = _run_git_command(cmd)
+u1-moonraker  |           ^^^^^^^^^^^^^^^^^^^^^
+u1-moonraker  |   File "/opt/moonraker/moonraker/utils/__init__.py", line 59, in _run_git_command
+u1-moonraker  |     process = subprocess.Popen(prog, stdout=subprocess.PIPE,
+u1-moonraker  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+u1-moonraker  |   File "/usr/local/lib/python3.11/subprocess.py", line 1026, in __init__
+u1-moonraker  |     self._execute_child(args, executable, preexec_fn, close_fds,
+u1-moonraker  |   File "/usr/local/lib/python3.11/subprocess.py", line 1955, in _execute_child
+u1-moonraker  |     raise child_exception_type(errno_num, err_msg, err_filename)
+u1-moonraker  | FileNotFoundError: [Errno 2] No such file or directory: 'git'
+u1-moonraker  | 
+u1-moonraker  | Application Info:
+u1-moonraker  | platform: Linux-6.17.0-35-generic-x86_64-with-glibc2.41
+u1-moonraker  | data_path: /data
+u1-moonraker  | is_default_data_path: False
+u1-moonraker  | config_file: /config/moonraker.conf
+u1-moonraker  | backup_config: None
+u1-moonraker  | startup_warnings: []
+u1-moonraker  | verbose: False
+u1-moonraker  | debug: False
+u1-moonraker  | asyncio_debug: False
+u1-moonraker  | is_backup_config: False
+u1-moonraker  | is_python_package: True
+u1-moonraker  | instance_uuid: e4c2064e86a24d5cac375741f83a404f
+u1-moonraker  | unix_socket_path: /data/comms/moonraker.sock
+u1-moonraker  | tmp_dir: /tmp/moonraker
+u1-moonraker  | config_writable: False
+u1-moonraker  | software_version: ?
+u1-moonraker  | git_branch: ?
+u1-moonraker  | git_remote: ?
+u1-moonraker  | git_repo_url: ?
+u1-moonraker  | modified_files: []
+u1-moonraker  | unofficial_components: []
+u1-moonraker  | log_file: 
+u1-moonraker  | python_version: 3.11.16 (main, Aug 13 2026, 19:40:50) [GCC 14.2.0]
+u1-moonraker  | launch_args: /usr/local/bin/python /opt/moonraker/moonraker/__main__.py -d /data -c /config/moonraker.conf -t /tmp/moonraker -n
+u1-moonraker  | msgspec_enabled: False
+u1-moonraker  | uvloop_enabled: False
+u1-moonraker  | [confighelper.py:read_file()] - Configuration File '/config/moonraker.conf' parsed, total size: 1310 B
+u1-moonraker  | [server.py:add_log_rollover_item()] - 
+u1-moonraker  | #################### Moonraker Configuration ####################
+u1-moonraker  | 
+u1-moonraker  | [server]
+u1-moonraker  | host = 0.0.0.0
+u1-moonraker  | port = 7125
+u1-moonraker  | klippy_uds_address = /run/klippy/klippy.sock
+u1-moonraker  | max_upload_size = 4096
+u1-moonraker  | 
+u1-moonraker  | [machine]
+u1-moonraker  | provider = none
+u1-moonraker  | 
+u1-moonraker  | [authorization]
+u1-moonraker  | trusted_clients = 
+u1-moonraker  | 	127.0.0.0/8
+u1-moonraker  | 	10.0.0.0/8
+u1-moonraker  | 	172.16.0.0/12
+u1-moonraker  | 	192.168.0.0/16
+u1-moonraker  | 	169.254.0.0/16
+u1-moonraker  | 	FE80::/10
+u1-moonraker  | 	::1/128
+u1-moonraker  | cors_domains = 
+u1-moonraker  | 	*.lan
+u1-moonraker  | 	*.local
+u1-moonraker  | 	*://localhost
+u1-moonraker  | 	*://localhost:*
+u1-moonraker  | 	*://homeassistant.local:*
+u1-moonraker  | 
+u1-moonraker  | [file_manager]
+u1-moonraker  | 
+u1-moonraker  | [octoprint_compat]
+u1-moonraker  | 
+u1-moonraker  | [history]
+u1-moonraker  | 
+u1-moonraker  | [snapmakercloud]
+u1-moonraker  | 
+u1-moonraker  | [exception_manager]
+u1-moonraker  | 
+u1-moonraker  | [client_manager]
+u1-moonraker  | 
+u1-moonraker  | [repeater]
+u1-moonraker  | 
+u1-moonraker  | #################################################################
+u1-moonraker  | All Configuration Files:
+u1-moonraker  | /config/moonraker.conf
+u1-moonraker  | #################################################################
+u1-moonraker  | [server.py:load_component()] - Component (secrets) loaded
+u1-moonraker  | [server.py:load_component()] - Component (template) loaded
+u1-moonraker  | [server.py:load_component()] - Component (klippy_connection) loaded
+u1-moonraker  | [server.py:load_component()] - Component (application) loaded
+u1-moonraker  | [server.py:load_component()] - Component (websockets) loaded
+u1-moonraker  | [server.py:add_log_rollover_item()] - Loading Sqlite database provider. Sqlite Version: 3.46.1
+u1-moonraker  | [server.py:add_log_rollover_item()] - Created default SQL table namespace_store
+u1-moonraker  | [server.py:add_log_rollover_item()] - Unsafe Shutdown Count: 0
+u1-moonraker  | [server.py:load_component()] - Component (database) loaded
+u1-moonraker  | [server.py:load_component()] - Component (dbus_manager) loaded
+u1-moonraker  | [file_manager.py:__init__()] - Using File System Observer: inotify
+u1-moonraker  | [server.py:load_component()] - Component (file_manager) loaded
+u1-moonraker  | [database.py:register_table()] - Creating table authorized_users...
+u1-moonraker  | [authorization.py:__init__()] - Authorization Configuration Loaded
+u1-moonraker  | Trusted Clients:
+u1-moonraker  | 127.0.0.0/8
+u1-moonraker  | 10.0.0.0/8
+u1-moonraker  | 172.16.0.0/12
+u1-moonraker  | 192.168.0.0/16
+u1-moonraker  | 169.254.0.0/16
+u1-moonraker  | fe80::/10
+u1-moonraker  | ::1/128
+u1-moonraker  | CORS Domains:
+u1-moonraker  | .*\.lan
+u1-moonraker  | .*\.local
+u1-moonraker  | .*://localhost
+u1-moonraker  | .*://localhost:.*
+u1-moonraker  | .*://homeassistant\.local:.*
+u1-moonraker  | [server.py:load_component()] - Component (authorization) loaded
+u1-moonraker  | [server.py:load_component()] - Component (klippy_apis) loaded
+u1-moonraker  | [machine.py:_get_product_info()] - Product info file not found, creating with default values
+u1-moonraker  | [machine.py:_get_product_info()] - No device name file found, using default value
+u1-moonraker  | [machine.py:_get_product_info()] - Reading product info from /data/.lava.sn
+u1-moonraker  | [machine.py:_get_product_info()] - No serial number file found, using default value
+u1-moonraker  | [machine.py:_get_product_info()] - product info: {'machine_type': 'Snapmaker U1', 'nozzle_diameter': [0.4, 0.4, 0.4, 0.4], 'serial_number': '', 'device_name': 'Snapmaker U1', 'firmware_version': '?', 'software_version': '?'}
+u1-moonraker  | [machine.py:_check_inside_container()] - Container detected via sched: docker
+u1-moonraker  | [server.py:add_log_rollover_item()] - 
+u1-moonraker  | System Info:
+u1-moonraker  | 
+u1-moonraker  | ***python***
+u1-moonraker  |   version: (3, 11, 16, 'final', 0)
+u1-moonraker  |   version_string: 3.11.16 (main, Aug 13 2026, 19:40:50) [GCC 14.2.0]
+u1-moonraker  | 
+u1-moonraker  | ***product_info***
+u1-moonraker  |   machine_type: Snapmaker U1
+u1-moonraker  |   nozzle_diameter: [0.4, 0.4, 0.4, 0.4]
+u1-moonraker  |   serial_number: 
+u1-moonraker  |   device_name: Snapmaker U1
+u1-moonraker  |   firmware_version: ?
+u1-moonraker  |   software_version: ?
+u1-moonraker  | 
+u1-moonraker  | ***cpu_info***
+u1-moonraker  |   cpu_count: 22
+u1-moonraker  |   bits: 64bit
+u1-moonraker  |   processor: x86_64
+u1-moonraker  |   cpu_desc: Intel(R) Core(TM) Ultra 9 185H
+u1-moonraker  |   serial_number: 
+u1-moonraker  |   hardware_desc: 
+u1-moonraker  |   model: 
+u1-moonraker  |   total_memory: 32271824
+u1-moonraker  |   memory_units: kB
+u1-moonraker  | 
+u1-moonraker  | ***sd_info***
+u1-moonraker  | 
+u1-moonraker  | ***distribution***
+u1-moonraker  |   name: Debian GNU/Linux 13 (trixie)
+u1-moonraker  |   id: debian
+u1-moonraker  |   version: 13
+u1-moonraker  |   version_parts: {'major': '13', 'minor': '', 'build_number': ''}
+u1-moonraker  |   like: 
+u1-moonraker  |   codename: trixie
+u1-moonraker  |   release_info: {}
+u1-moonraker  |   kernel_version: 6.17.0-35-generic
+u1-moonraker  | 
+u1-moonraker  | ***virtualization***
+u1-moonraker  |   virt_type: container
+u1-moonraker  |   virt_identifier: docker
+u1-moonraker  | 
+u1-moonraker  | ***network***
+u1-moonraker  | 
+u1-moonraker  | ***canbus***
+u1-moonraker  | 
+u1-moonraker  | ***Allowed Services***
+u1-moonraker  |   klipper_mcu
+u1-moonraker  |   webcamd
+u1-moonraker  |   MoonCord
+u1-moonraker  |   KlipperScreen
+u1-moonraker  |   moonraker-telegram-bot
+u1-moonraker  |   moonraker-obico
+u1-moonraker  |   sonar
+u1-moonraker  |   crowsnest
+u1-moonraker  |   octoeverywhere
+u1-moonraker  |   ratos-configurator
+u1-moonraker  | [server.py:load_component()] - Component (shell_command) loaded
+u1-moonraker  | [machine.py:__init__()] - Using System Provider: none
+u1-moonraker  | [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+u1-moonraker  | [server.py:load_component()] - Component (machine) loaded
+u1-moonraker  | [server.py:load_component()] - Component (data_store) loaded
+u1-moonraker  | [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+u1-moonraker  | [server.py:load_component()] - Component (proc_stats) loaded
+u1-moonraker  | [server.py:load_component()] - Component (job_state) loaded
+u1-moonraker  | [server.py:load_component()] - Component (job_queue) loaded
+u1-moonraker  | [database.py:register_table()] - Creating table job_history...
+u1-moonraker  | [database.py:register_table()] - Creating table job_totals...
+u1-moonraker  | [history.py:migrate()] - Migrating history totals from moonraker namespace...
+u1-moonraker  | [server.py:load_component()] - Component (history) loaded
+u1-moonraker  | [server.py:load_component()] - Component (http_client) loaded
+u1-moonraker  | [server.py:load_component()] - Component (httpx_client) loaded
+u1-moonraker  | [server.py:load_component()] - Component (announcements) loaded
+u1-moonraker  | [server.py:load_component()] - Component (webcam) loaded
+u1-moonraker  | [server.py:load_component()] - Component (extensions) loaded
+u1-moonraker  | [server.py:load_component()] - Component (exception_manager) loaded
+u1-moonraker  | [snapmakercloud.py:__init__()] - failed to get sn file
+u1-moonraker  | [server.py:load_component()] - Component (snapmakercloud) loaded
+u1-moonraker  | [client_manager.py:_load_oem_config()] - Creating new clients file: /data/mqtt/client.json
+u1-moonraker  | /opt/moonraker/moonraker/components/client_manager.py:920: RuntimeWarning: coroutine 'ClientManager._remove_local_mqtt_certs' was never awaited
+u1-moonraker  |   self._remove_local_mqtt_certs()
+u1-moonraker  | RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+u1-moonraker  | [client_manager.py:__init__()] - oem config: {'access_code': 12345678, 'logging_out_userid': '', 'link_mode': 0, 'region': ''}
+u1-moonraker  | [server.py:load_component()] - Component (client_manager) loaded
+u1-moonraker  | [server.py:load_component()] - Component (octoprint_compat) loaded
+u1-moonraker  | [server.py:load_component()] - Component (repeater) loaded
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [database]
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+u1-moonraker  | [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+u1-moonraker  | [machine.py:update_usb_ids()] - Fetching latest usb.ids file...
+u1-moonraker  | [machine.py:validation_init()] - Installation version in database up to date
+u1-moonraker  | [machine.py:_find_public_ip()] - Detected Local IP: 172.21.0.3
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [history]
+u1-moonraker  | [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://172.21.0.3
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+u1-moonraker  | [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://172.21.0.3
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [exception_manager]
+u1-moonraker  | [exception_manager.py:component_init()] - excepmgr: MQTT doesn't exist
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [snapmakercloud]
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [client_manager]
+u1-moonraker  | [client_manager.py:component_init()] - smclient: MQTT doesn't exist
+u1-moonraker  | [server.py:_initialize_component()] - Performing Component Post Init: [repeater]
+u1-moonraker  | [repeater.py:component_init()] - smcloud: MQTT doesn't exist
+u1-moonraker  | [snapmakercloud.py:component_init()] - smcloud: MQTT doesn't exist
+u1-moonraker  | [confighelper.py:create_backup()] - Backing up last working configuration to '/config/.moonraker.conf.bkp'
+u1-moonraker  | [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/data/comms/moonraker.sock'
+u1-moonraker  | [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: 59552ca4a892
+u1-moonraker  | [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+u1-moonraker  | [klippy_connection.py:_do_connect()] - Klippy Connection Established
+u1-moonraker  | [server.py:add_log_rollover_item()] - Klipper Version: v0.12.0-u1sim
+u1-moonraker  | [klippy_connection.py:_save_path_info()] - Updated Stored Klipper Source Path: /opt/u1-companion
+u1-moonraker  | [klippy_connection.py:_save_path_info()] - Updated Stored Klipper Python Path: /usr/local/bin/python
+u1-moonraker  | [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+u1-moonraker  | [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+u1-moonraker  | [snapmakercloud.py:update_device_status()] - MQTT client not initialized, cannot update device status
+u1-moonraker  | [machine.py:_update_msm_from_status()] - machine state: {'main_state': 0, 'action_code': 0}
+u1-moonraker  | [job_state.py:_handle_started()] - Job state initialized: standby
+u1-moonraker  | [klippy_connection.py:_check_ready()] - Klippy ready
+u1-moonraker  | [exception_manager.py:_on_klippy_ready()] - query klippy exceptions
+u1-moonraker  | [snapmakercloud.py:update_device_status()] - MQTT client not initialized, cannot update device status
+u1-moonraker  | [exception_manager.py:_on_klippy_ready()] - klippy exceptions: {'exception_manager': {'exceptions': []}}
+u1-moonraker  | [exception_manager.py:_set_motion_exception()] - klippy exceptions: []
+u1-moonraker  | [data_store.py:_init_sensors()] - Configuring available sensors: ['extruder', 'extruder1', 'extruder2', 'extruder3', 'heater_bed', 'temperature_sensor cavity']
+u1-moonraker  | [machine.py:update_usb_ids()] - Writing usb.ids file...
+u1-moonraker  | [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+u1-moonraker  | [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 172.21.0.1
+u1-moonraker  | [machine.py:_update_msm_from_status()] - machine state: {'main_state': 1, 'action_code': 0}
+u1-moonraker  | [job_state.py:_status_update()] - Job Started: u1-four-color-demo.gcode

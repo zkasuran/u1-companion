@@ -1,0 +1,1839 @@
+[
+  {
+    "entity_id": "binary_sensor.u1sim_exception",
+    "state": "off",
+    "attributes": {
+      "exceptions": [],
+      "device_class": "problem",
+      "friendly_name": "u1sim Exception"
+    },
+    "last_changed": "2026-08-15T05:12:31.694609+00:00",
+    "last_reported": "2026-08-15T05:12:51.585462+00:00",
+    "last_updated": "2026-08-15T05:12:31.694609+00:00",
+    "context": {
+      "id": "01M01XC06EM5FDVCR1YHK4B63G",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_paused",
+    "state": "off",
+    "attributes": {
+      "friendly_name": "u1sim Paused"
+    },
+    "last_changed": "2026-08-15T05:12:31.694449+00:00",
+    "last_reported": "2026-08-15T05:12:51.585411+00:00",
+    "last_updated": "2026-08-15T05:12:31.694449+00:00",
+    "context": {
+      "id": "01M01XC06EJJGG7TREBJ3DQVR1",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_0_filament_present",
+    "state": "on",
+    "attributes": {
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 0 filament present"
+    },
+    "last_changed": "2026-08-15T05:12:31.694795+00:00",
+    "last_reported": "2026-08-15T05:12:51.585545+00:00",
+    "last_updated": "2026-08-15T05:12:31.694795+00:00",
+    "context": {
+      "id": "01M01XC06EFH9HXZP190XEZKBC",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_0_in_use",
+    "state": "on",
+    "attributes": {
+      "friendly_name": "u1sim Slot 0 in use"
+    },
+    "last_changed": "2026-08-15T05:12:31.694938+00:00",
+    "last_reported": "2026-08-15T05:12:51.585585+00:00",
+    "last_updated": "2026-08-15T05:12:31.694938+00:00",
+    "context": {
+      "id": "01M01XC06E7N0QXJ21HDJHG1NG",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_0_official_spool",
+    "state": "on",
+    "attributes": {
+      "sku": 12001,
+      "user_editable": false,
+      "friendly_name": "u1sim Slot 0 official spool"
+    },
+    "last_changed": "2026-08-15T05:12:31.695095+00:00",
+    "last_reported": "2026-08-15T05:12:51.585664+00:00",
+    "last_updated": "2026-08-15T05:12:31.695095+00:00",
+    "context": {
+      "id": "01M01XC06FDDP4FCJF253ANSS2",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_1_filament_present",
+    "state": "on",
+    "attributes": {
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 1 filament present"
+    },
+    "last_changed": "2026-08-15T05:12:31.695230+00:00",
+    "last_reported": "2026-08-15T05:12:51.585696+00:00",
+    "last_updated": "2026-08-15T05:12:31.695230+00:00",
+    "context": {
+      "id": "01M01XC06FRAYYV0JR7931FBY9",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_1_in_use",
+    "state": "on",
+    "attributes": {
+      "friendly_name": "u1sim Slot 1 in use"
+    },
+    "last_changed": "2026-08-15T05:12:31.695355+00:00",
+    "last_reported": "2026-08-15T05:12:51.585726+00:00",
+    "last_updated": "2026-08-15T05:12:31.695355+00:00",
+    "context": {
+      "id": "01M01XC06FBYD4GY216MHR6HT6",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_1_official_spool",
+    "state": "on",
+    "attributes": {
+      "sku": 12042,
+      "user_editable": false,
+      "friendly_name": "u1sim Slot 1 official spool"
+    },
+    "last_changed": "2026-08-15T05:12:31.695502+00:00",
+    "last_reported": "2026-08-15T05:12:51.585787+00:00",
+    "last_updated": "2026-08-15T05:12:31.695502+00:00",
+    "context": {
+      "id": "01M01XC06FHRMC1K43DNGXSSR4",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_2_filament_present",
+    "state": "on",
+    "attributes": {
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 2 filament present"
+    },
+    "last_changed": "2026-08-15T05:12:31.695624+00:00",
+    "last_reported": "2026-08-15T05:12:51.585818+00:00",
+    "last_updated": "2026-08-15T05:12:31.695624+00:00",
+    "context": {
+      "id": "01M01XC06FQDVTC30GZVWEHFFV",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_2_in_use",
+    "state": "on",
+    "attributes": {
+      "friendly_name": "u1sim Slot 2 in use"
+    },
+    "last_changed": "2026-08-15T05:12:31.695754+00:00",
+    "last_reported": "2026-08-15T05:12:51.585845+00:00",
+    "last_updated": "2026-08-15T05:12:31.695754+00:00",
+    "context": {
+      "id": "01M01XC06FMRGS2K4F75PV00EE",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_2_official_spool",
+    "state": "on",
+    "attributes": {
+      "sku": 13007,
+      "user_editable": false,
+      "friendly_name": "u1sim Slot 2 official spool"
+    },
+    "last_changed": "2026-08-15T05:12:31.695893+00:00",
+    "last_reported": "2026-08-15T05:12:51.585904+00:00",
+    "last_updated": "2026-08-15T05:12:31.695893+00:00",
+    "context": {
+      "id": "01M01XC06F9Q8Q43SVBXCN3RT1",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_3_filament_present",
+    "state": "on",
+    "attributes": {
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 3 filament present"
+    },
+    "last_changed": "2026-08-15T05:12:31.696014+00:00",
+    "last_reported": "2026-08-15T05:12:51.585937+00:00",
+    "last_updated": "2026-08-15T05:12:31.696014+00:00",
+    "context": {
+      "id": "01M01XC06GQXNVN94SQ741H2RH",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_3_in_use",
+    "state": "on",
+    "attributes": {
+      "friendly_name": "u1sim Slot 3 in use"
+    },
+    "last_changed": "2026-08-15T05:12:31.696131+00:00",
+    "last_reported": "2026-08-15T05:12:51.585967+00:00",
+    "last_updated": "2026-08-15T05:12:31.696131+00:00",
+    "context": {
+      "id": "01M01XC06GCQWPXS72CGCV8GGP",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "binary_sensor.u1sim_slot_3_official_spool",
+    "state": "off",
+    "attributes": {
+      "sku": null,
+      "user_editable": true,
+      "friendly_name": "u1sim Slot 3 official spool"
+    },
+    "last_changed": "2026-08-15T05:12:31.696272+00:00",
+    "last_reported": "2026-08-15T05:12:51.586032+00:00",
+    "last_updated": "2026-08-15T05:12:31.696272+00:00",
+    "context": {
+      "id": "01M01XC06GSVQXP967RGE7XKG8",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "button.u1sim_cancel",
+    "state": "unknown",
+    "attributes": {
+      "icon": "mdi:stop",
+      "friendly_name": "u1sim Cancel"
+    },
+    "last_changed": "2026-08-15T05:12:31.696817+00:00",
+    "last_reported": "2026-08-15T05:12:32.280626+00:00",
+    "last_updated": "2026-08-15T05:12:31.696817+00:00",
+    "context": {
+      "id": "01M01XC06G15DA60FC9BS1YBQ9",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "button.u1sim_emergency_stop",
+    "state": "unknown",
+    "attributes": {
+      "icon": "mdi:alert-octagon",
+      "friendly_name": "u1sim Emergency stop"
+    },
+    "last_changed": "2026-08-15T05:12:31.696922+00:00",
+    "last_reported": "2026-08-15T05:12:32.280653+00:00",
+    "last_updated": "2026-08-15T05:12:31.696922+00:00",
+    "context": {
+      "id": "01M01XC06G41QR36S9VNCBCE10",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "button.u1sim_pause",
+    "state": "unknown",
+    "attributes": {
+      "icon": "mdi:pause",
+      "friendly_name": "u1sim Pause"
+    },
+    "last_changed": "2026-08-15T05:12:31.696569+00:00",
+    "last_reported": "2026-08-15T05:12:32.280605+00:00",
+    "last_updated": "2026-08-15T05:12:31.696569+00:00",
+    "context": {
+      "id": "01M01XC06GANR9J7ZB61SR2500",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "button.u1sim_resume",
+    "state": "unknown",
+    "attributes": {
+      "icon": "mdi:play",
+      "friendly_name": "u1sim Resume"
+    },
+    "last_changed": "2026-08-15T05:12:31.696703+00:00",
+    "last_reported": "2026-08-15T05:12:32.280617+00:00",
+    "last_updated": "2026-08-15T05:12:31.696703+00:00",
+    "context": {
+      "id": "01M01XC06GE5XB61YS91X5F4Q3",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "select.u1sim_entangle_detection_sensitivity",
+    "state": "medium",
+    "attributes": {
+      "options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "friendly_name": "u1sim Entangle detection sensitivity"
+    },
+    "last_changed": "2026-08-15T05:12:31.697158+00:00",
+    "last_reported": "2026-08-15T05:12:51.586094+00:00",
+    "last_updated": "2026-08-15T05:12:31.697158+00:00",
+    "context": {
+      "id": "01M01XC06H2KZPZ0NFYSKBS0F9",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_active_tool",
+    "state": "1",
+    "attributes": {
+      "extruder_object": "extruder1",
+      "color_map": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "friendly_name": "u1sim Active tool"
+    },
+    "last_changed": "2026-08-15T05:12:49.329782+00:00",
+    "last_reported": "2026-08-15T05:12:51.586353+00:00",
+    "last_updated": "2026-08-15T05:12:49.329782+00:00",
+    "context": {
+      "id": "01M01XCHDH5Q5S9B3GX949HVSV",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_bed_temperature",
+    "state": "59.84",
+    "attributes": {
+      "state_class": "measurement",
+      "target": 60.0,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Bed temperature"
+    },
+    "last_changed": "2026-08-15T05:12:51.586380+00:00",
+    "last_reported": "2026-08-15T05:12:51.586380+00:00",
+    "last_updated": "2026-08-15T05:12:51.586380+00:00",
+    "context": {
+      "id": "01M01XCKM2JE5586QK9VJAHS30",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_current_file",
+    "state": "u1-four-color-demo.gcode",
+    "attributes": {
+      "slicer_estimate_grams_per_color": {},
+      "metadata_filename": "u1-four-color-demo.gcode",
+      "friendly_name": "u1sim Current file"
+    },
+    "last_changed": "2026-08-15T05:12:31.698083+00:00",
+    "last_reported": "2026-08-15T05:12:51.586236+00:00",
+    "last_updated": "2026-08-15T05:12:31.698083+00:00",
+    "context": {
+      "id": "01M01XC06J1FXY5NE1R9GFZGCR",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_filament_used",
+    "state": "1015.338",
+    "attributes": {
+      "state_class": "measurement",
+      "unit_of_measurement": "mm",
+      "friendly_name": "u1sim Filament used"
+    },
+    "last_changed": "2026-08-15T05:12:51.586326+00:00",
+    "last_reported": "2026-08-15T05:12:51.586326+00:00",
+    "last_updated": "2026-08-15T05:12:51.586326+00:00",
+    "context": {
+      "id": "01M01XCKM2KPDJQJ8VHKZN9P32",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_0_dock_state",
+    "state": "PARKED",
+    "attributes": {
+      "friendly_name": "u1sim Head 0 dock state"
+    },
+    "last_changed": "2026-08-15T05:12:49.330510+00:00",
+    "last_reported": "2026-08-15T05:12:51.587009+00:00",
+    "last_updated": "2026-08-15T05:12:49.330510+00:00",
+    "context": {
+      "id": "01M01XCHDJV549J4GY7G4T6D3R",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_0_nozzle_temperature",
+    "state": "213.16",
+    "attributes": {
+      "state_class": "measurement",
+      "target": 215.0,
+      "power": 0.0918,
+      "can_extrude": true,
+      "nozzle_diameter": 0.4,
+      "extruder_index": 0,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Head 0 nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:51.586984+00:00",
+    "last_reported": "2026-08-15T05:12:51.586984+00:00",
+    "last_updated": "2026-08-15T05:12:51.586984+00:00",
+    "context": {
+      "id": "01M01XCKM25HZ11JM8NSBNWM3Q",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_1_dock_state",
+    "state": "ACTIVATE",
+    "attributes": {
+      "friendly_name": "u1sim Head 1 dock state"
+    },
+    "last_changed": "2026-08-15T05:12:49.331010+00:00",
+    "last_reported": "2026-08-15T05:12:51.587492+00:00",
+    "last_updated": "2026-08-15T05:12:49.331010+00:00",
+    "context": {
+      "id": "01M01XCHDKMBA0MQXB6ANX8NRA",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_1_nozzle_temperature",
+    "state": "213.0",
+    "attributes": {
+      "state_class": "measurement",
+      "target": 215.0,
+      "power": 0.0998,
+      "can_extrude": true,
+      "nozzle_diameter": 0.4,
+      "extruder_index": 1,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Head 1 nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:51.587476+00:00",
+    "last_reported": "2026-08-15T05:12:51.587476+00:00",
+    "last_updated": "2026-08-15T05:12:51.587476+00:00",
+    "context": {
+      "id": "01M01XCKM3DC4BX4CT42EXWA3J",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_2_dock_state",
+    "state": "PARKED",
+    "attributes": {
+      "friendly_name": "u1sim Head 2 dock state"
+    },
+    "last_changed": "2026-08-15T05:12:31.705580+00:00",
+    "last_reported": "2026-08-15T05:12:51.587855+00:00",
+    "last_updated": "2026-08-15T05:12:31.705580+00:00",
+    "context": {
+      "id": "01M01XC06SFAN8XG163J2E549X",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_2_nozzle_temperature",
+    "state": "247.43",
+    "attributes": {
+      "state_class": "measurement",
+      "target": 250.0,
+      "power": 0.1285,
+      "can_extrude": true,
+      "nozzle_diameter": 0.4,
+      "extruder_index": 2,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Head 2 nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:51.587841+00:00",
+    "last_reported": "2026-08-15T05:12:51.587841+00:00",
+    "last_updated": "2026-08-15T05:12:51.587841+00:00",
+    "context": {
+      "id": "01M01XCKM3GGB4C34RGMA1VDW3",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_3_dock_state",
+    "state": "PARKED",
+    "attributes": {
+      "friendly_name": "u1sim Head 3 dock state"
+    },
+    "last_changed": "2026-08-15T05:12:31.707434+00:00",
+    "last_reported": "2026-08-15T05:12:51.588115+00:00",
+    "last_updated": "2026-08-15T05:12:31.707434+00:00",
+    "context": {
+      "id": "01M01XC06VZWHQHDNTH2AD15E2",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_head_3_nozzle_temperature",
+    "state": "212.64",
+    "attributes": {
+      "state_class": "measurement",
+      "target": 215.0,
+      "power": 0.1179,
+      "can_extrude": true,
+      "nozzle_diameter": 0.4,
+      "extruder_index": 3,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Head 3 nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:51.588099+00:00",
+    "last_reported": "2026-08-15T05:12:51.588099+00:00",
+    "last_updated": "2026-08-15T05:12:51.588099+00:00",
+    "context": {
+      "id": "01M01XCKM48EGVQT5M99KNDJ66",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_klipper_state",
+    "state": "ready",
+    "attributes": {
+      "message": "Printer is ready",
+      "friendly_name": "u1sim Klipper state"
+    },
+    "last_changed": "2026-08-15T05:12:31.699386+00:00",
+    "last_reported": "2026-08-15T05:12:51.586402+00:00",
+    "last_updated": "2026-08-15T05:12:31.699386+00:00",
+    "context": {
+      "id": "01M01XC06K8QGCRDVTF0XDD6E5",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_layer",
+    "state": "29",
+    "attributes": {
+      "total": 240,
+      "friendly_name": "u1sim Layer"
+    },
+    "last_changed": "2026-08-15T05:12:51.335566+00:00",
+    "last_reported": "2026-08-15T05:12:51.586256+00:00",
+    "last_updated": "2026-08-15T05:12:51.335566+00:00",
+    "context": {
+      "id": "01M01XCKC7M519Y6P2P0QSP6MD",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_machine_state",
+    "state": "printing",
+    "attributes": {
+      "action_code": 0,
+      "action": "idle",
+      "friendly_name": "u1sim Machine state"
+    },
+    "last_changed": "2026-08-15T05:12:31.699511+00:00",
+    "last_reported": "2026-08-15T05:12:51.586422+00:00",
+    "last_updated": "2026-08-15T05:12:31.699511+00:00",
+    "context": {
+      "id": "01M01XC06K980A4V9R5777ABDC",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_print_duration",
+    "state": "28.335",
+    "attributes": {
+      "unit_of_measurement": "s",
+      "device_class": "duration",
+      "friendly_name": "u1sim Print duration"
+    },
+    "last_changed": "2026-08-15T05:12:51.586278+00:00",
+    "last_reported": "2026-08-15T05:12:51.586278+00:00",
+    "last_updated": "2026-08-15T05:12:51.586278+00:00",
+    "context": {
+      "id": "01M01XCKM2XKBR6YWMV2T5QRK2",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_print_state",
+    "state": "printing",
+    "attributes": {
+      "options": [
+        "standby",
+        "printing",
+        "paused",
+        "complete",
+        "cancelled",
+        "error"
+      ],
+      "message": null,
+      "exception": {},
+      "device_class": "enum",
+      "friendly_name": "u1sim Print state"
+    },
+    "last_changed": "2026-08-15T05:12:31.697700+00:00",
+    "last_reported": "2026-08-15T05:12:51.586136+00:00",
+    "last_updated": "2026-08-15T05:12:31.697700+00:00",
+    "context": {
+      "id": "01M01XC06H8207T1K09ZZEYAGC",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_progress",
+    "state": "11.8",
+    "attributes": {
+      "state_class": "measurement",
+      "unit_of_measurement": "%",
+      "friendly_name": "u1sim Progress"
+    },
+    "last_changed": "2026-08-15T05:12:51.586179+00:00",
+    "last_reported": "2026-08-15T05:12:51.586179+00:00",
+    "last_updated": "2026-08-15T05:12:51.586179+00:00",
+    "context": {
+      "id": "01M01XCKM2117JBTHA6Z9GWGX8",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_assigned_colors",
+    "state": "27",
+    "attributes": {
+      "colors": [
+        0,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "color_map": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "friendly_name": "u1sim Slot 0 assigned colors"
+    },
+    "last_changed": "2026-08-15T05:12:31.700147+00:00",
+    "last_reported": "2026-08-15T05:12:51.586670+00:00",
+    "last_updated": "2026-08-15T05:12:31.700147+00:00",
+    "context": {
+      "id": "01M01XC06MCYJ6RJP9XJHGJFWW",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_color",
+    "state": "#000000",
+    "attributes": {
+      "color": "#000000",
+      "colors": [
+        "#000000"
+      ],
+      "color_count": 1,
+      "color_mode": 0,
+      "alpha": 255,
+      "argb": 4278190080,
+      "argb_color": "#000000",
+      "gradient": false,
+      "color_mismatch": false,
+      "icon": "mdi:palette",
+      "friendly_name": "u1sim Slot 0 color"
+    },
+    "last_changed": "2026-08-15T05:12:31.699986+00:00",
+    "last_reported": "2026-08-15T05:12:51.586610+00:00",
+    "last_updated": "2026-08-15T05:12:31.699986+00:00",
+    "context": {
+      "id": "01M01XC06KMVAZSNRTYDCBANRB",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_drying_temperature",
+    "state": "55",
+    "attributes": {
+      "drying_time_hours": 8,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 0 drying temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.700739+00:00",
+    "last_reported": "2026-08-15T05:12:51.586799+00:00",
+    "last_updated": "2026-08-15T05:12:31.700739+00:00",
+    "context": {
+      "id": "01M01XC06MR2Z2N1657472X82D",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_filament",
+    "state": "PLA",
+    "attributes": {
+      "vendor": "Snapmaker",
+      "sub_type": "Basic",
+      "official": true,
+      "sku": 12001,
+      "soft": false,
+      "user_editable": false,
+      "present": true,
+      "in_use": true,
+      "assigned_colors": [
+        0,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "color": "#000000",
+      "colors": [
+        "#000000"
+      ],
+      "color_count": 1,
+      "color_mode": 0,
+      "alpha": 255,
+      "argb": 4278190080,
+      "argb_color": "#000000",
+      "gradient": false,
+      "color_mismatch": false,
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 0 filament"
+    },
+    "last_changed": "2026-08-15T05:12:31.699678+00:00",
+    "last_reported": "2026-08-15T05:12:51.586488+00:00",
+    "last_updated": "2026-08-15T05:12:31.699678+00:00",
+    "context": {
+      "id": "01M01XC06K7YN01ZW64SWG8YSQ",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_job_filament_estimated",
+    "state": "unknown",
+    "attributes": {
+      "source": "slicer_estimate",
+      "filename": "u1-four-color-demo.gcode",
+      "grams_per_color": {},
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 0 job filament, estimated"
+    },
+    "last_changed": "2026-08-15T05:12:31.700328+00:00",
+    "last_reported": "2026-08-15T05:12:51.586693+00:00",
+    "last_updated": "2026-08-15T05:12:31.700328+00:00",
+    "context": {
+      "id": "01M01XC06M2B0H98ABFDFWWZP6",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_recommended_nozzle_temperature",
+    "state": "210",
+    "attributes": {
+      "first_layer": 215,
+      "hotend_min": 190,
+      "hotend_max": 240,
+      "bed_temp": 60,
+      "bed_type": 1,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 0 recommended nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.700962+00:00",
+    "last_reported": "2026-08-15T05:12:51.586897+00:00",
+    "last_updated": "2026-08-15T05:12:31.700962+00:00",
+    "context": {
+      "id": "01M01XC06MSZT2TR5KXXCWFKP3",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_scan_state",
+    "state": "idle",
+    "attributes": {
+      "friendly_name": "u1sim Slot 0 scan state"
+    },
+    "last_changed": "2026-08-15T05:12:31.701236+00:00",
+    "last_reported": "2026-08-15T05:12:51.586958+00:00",
+    "last_updated": "2026-08-15T05:12:31.701236+00:00",
+    "context": {
+      "id": "01M01XC06N65KDN4GBHB68B9P6",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_spool_weight",
+    "state": "1000",
+    "attributes": {
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 0 spool weight"
+    },
+    "last_changed": "2026-08-15T05:12:31.700520+00:00",
+    "last_reported": "2026-08-15T05:12:51.586748+00:00",
+    "last_updated": "2026-08-15T05:12:31.700520+00:00",
+    "context": {
+      "id": "01M01XC06M25SX4HAS4234VY4Y",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_tag_manufactured",
+    "state": "20260114",
+    "attributes": {
+      "manufacturer": "Snapmaker",
+      "card_uid": [
+        4,
+        210,
+        17,
+        32
+      ],
+      "protocol_version": 1,
+      "rsa_key_version": 1,
+      "tray": 1,
+      "diameter": null,
+      "length": null,
+      "sku": 12001,
+      "official": true,
+      "vendor": "Snapmaker",
+      "filament_type": "PLA",
+      "sub_type": "Basic",
+      "color": "#000000",
+      "colors": [
+        "#000000"
+      ],
+      "multi_mode": 0,
+      "friendly_name": "u1sim Slot 0 tag manufactured"
+    },
+    "last_changed": "2026-08-15T05:12:31.701113+00:00",
+    "last_reported": "2026-08-15T05:12:51.586941+00:00",
+    "last_updated": "2026-08-15T05:12:31.701113+00:00",
+    "context": {
+      "id": "01M01XC06NKJEZ03BKD7J26TYB",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_0_vendor",
+    "state": "Snapmaker",
+    "attributes": {
+      "sku": 12001,
+      "official": true,
+      "friendly_name": "u1sim Slot 0 vendor"
+    },
+    "last_changed": "2026-08-15T05:12:31.699843+00:00",
+    "last_reported": "2026-08-15T05:12:51.586560+00:00",
+    "last_updated": "2026-08-15T05:12:31.699843+00:00",
+    "context": {
+      "id": "01M01XC06K92M35STMQ16GC5F4",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_assigned_colors",
+    "state": "2",
+    "attributes": {
+      "colors": [
+        1,
+        4
+      ],
+      "color_map": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "friendly_name": "u1sim Slot 1 assigned colors"
+    },
+    "last_changed": "2026-08-15T05:12:31.702152+00:00",
+    "last_reported": "2026-08-15T05:12:51.587236+00:00",
+    "last_updated": "2026-08-15T05:12:31.702152+00:00",
+    "context": {
+      "id": "01M01XC06P5HPH44WPWJVE9R43",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_color",
+    "state": "#F5F0E1",
+    "attributes": {
+      "color": "#F5F0E1",
+      "colors": [
+        "#F5F0E1"
+      ],
+      "color_count": 1,
+      "color_mode": 0,
+      "alpha": 255,
+      "argb": 4294308065,
+      "argb_color": "#F5F0E1",
+      "gradient": false,
+      "color_mismatch": false,
+      "icon": "mdi:palette",
+      "friendly_name": "u1sim Slot 1 color"
+    },
+    "last_changed": "2026-08-15T05:12:31.702006+00:00",
+    "last_reported": "2026-08-15T05:12:51.587188+00:00",
+    "last_updated": "2026-08-15T05:12:31.702006+00:00",
+    "context": {
+      "id": "01M01XC06PGNY7F8QH5FWYETEX",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_drying_temperature",
+    "state": "55",
+    "attributes": {
+      "drying_time_hours": 8,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 1 drying temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.702731+00:00",
+    "last_reported": "2026-08-15T05:12:51.587337+00:00",
+    "last_updated": "2026-08-15T05:12:31.702731+00:00",
+    "context": {
+      "id": "01M01XC06P0F4988D0CQAXFZX5",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_filament",
+    "state": "PLA",
+    "attributes": {
+      "vendor": "Snapmaker",
+      "sub_type": "Matte",
+      "official": true,
+      "sku": 12042,
+      "soft": false,
+      "user_editable": false,
+      "present": true,
+      "in_use": true,
+      "assigned_colors": [
+        1,
+        4
+      ],
+      "color": "#F5F0E1",
+      "colors": [
+        "#F5F0E1"
+      ],
+      "color_count": 1,
+      "color_mode": 0,
+      "alpha": 255,
+      "argb": 4294308065,
+      "argb_color": "#F5F0E1",
+      "gradient": false,
+      "color_mismatch": false,
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 1 filament"
+    },
+    "last_changed": "2026-08-15T05:12:31.701690+00:00",
+    "last_reported": "2026-08-15T05:12:51.587073+00:00",
+    "last_updated": "2026-08-15T05:12:31.701690+00:00",
+    "context": {
+      "id": "01M01XC06NDFCVJ4HPKCVAP3DJ",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_job_filament_estimated",
+    "state": "unknown",
+    "attributes": {
+      "source": "slicer_estimate",
+      "filename": "u1-four-color-demo.gcode",
+      "grams_per_color": {},
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 1 job filament, estimated"
+    },
+    "last_changed": "2026-08-15T05:12:31.702334+00:00",
+    "last_reported": "2026-08-15T05:12:51.587255+00:00",
+    "last_updated": "2026-08-15T05:12:31.702334+00:00",
+    "context": {
+      "id": "01M01XC06PHQ8HDPADY92YYZWZ",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_recommended_nozzle_temperature",
+    "state": "205",
+    "attributes": {
+      "first_layer": 215,
+      "hotend_min": 190,
+      "hotend_max": 240,
+      "bed_temp": 60,
+      "bed_type": 1,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 1 recommended nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.702960+00:00",
+    "last_reported": "2026-08-15T05:12:51.587423+00:00",
+    "last_updated": "2026-08-15T05:12:31.702960+00:00",
+    "context": {
+      "id": "01M01XC06PTN8BY0G06M7R9X4G",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_scan_state",
+    "state": "idle",
+    "attributes": {
+      "friendly_name": "u1sim Slot 1 scan state"
+    },
+    "last_changed": "2026-08-15T05:12:31.703238+00:00",
+    "last_reported": "2026-08-15T05:12:51.587462+00:00",
+    "last_updated": "2026-08-15T05:12:31.703238+00:00",
+    "context": {
+      "id": "01M01XC06QD62KT099ZZZD7ACD",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_spool_weight",
+    "state": "1000",
+    "attributes": {
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 1 spool weight"
+    },
+    "last_changed": "2026-08-15T05:12:31.702518+00:00",
+    "last_reported": "2026-08-15T05:12:51.587292+00:00",
+    "last_updated": "2026-08-15T05:12:31.702518+00:00",
+    "context": {
+      "id": "01M01XC06PTV39CJQ755PQ8BBD",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_tag_manufactured",
+    "state": "20260203",
+    "attributes": {
+      "manufacturer": "Snapmaker",
+      "card_uid": [
+        17,
+        96,
+        44,
+        8
+      ],
+      "protocol_version": 1,
+      "rsa_key_version": 1,
+      "tray": 1,
+      "diameter": null,
+      "length": null,
+      "sku": 12042,
+      "official": true,
+      "vendor": "Snapmaker",
+      "filament_type": "PLA",
+      "sub_type": "Matte",
+      "color": "#F5F0E1",
+      "colors": [
+        "#F5F0E1"
+      ],
+      "multi_mode": 0,
+      "friendly_name": "u1sim Slot 1 tag manufactured"
+    },
+    "last_changed": "2026-08-15T05:12:31.703111+00:00",
+    "last_reported": "2026-08-15T05:12:51.587451+00:00",
+    "last_updated": "2026-08-15T05:12:31.703111+00:00",
+    "context": {
+      "id": "01M01XC06QJPJRTBVQBFTK9RJQ",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_1_vendor",
+    "state": "Snapmaker",
+    "attributes": {
+      "sku": 12042,
+      "official": true,
+      "friendly_name": "u1sim Slot 1 vendor"
+    },
+    "last_changed": "2026-08-15T05:12:31.701855+00:00",
+    "last_reported": "2026-08-15T05:12:51.587139+00:00",
+    "last_updated": "2026-08-15T05:12:31.701855+00:00",
+    "context": {
+      "id": "01M01XC06NVJAV0KXHSCFXY32Q",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_assigned_colors",
+    "state": "2",
+    "attributes": {
+      "colors": [
+        2,
+        5
+      ],
+      "color_map": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "friendly_name": "u1sim Slot 2 assigned colors"
+    },
+    "last_changed": "2026-08-15T05:12:31.704133+00:00",
+    "last_reported": "2026-08-15T05:12:51.587653+00:00",
+    "last_updated": "2026-08-15T05:12:31.704133+00:00",
+    "context": {
+      "id": "01M01XC06R5RHMGEKQHNN8RYB5",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_color",
+    "state": "#D3232A",
+    "attributes": {
+      "color": "#D3232A",
+      "colors": [
+        "#D3232A"
+      ],
+      "color_count": 1,
+      "color_mode": 0,
+      "alpha": 255,
+      "argb": 4292027178,
+      "argb_color": "#D3232A",
+      "gradient": false,
+      "color_mismatch": false,
+      "icon": "mdi:palette",
+      "friendly_name": "u1sim Slot 2 color"
+    },
+    "last_changed": "2026-08-15T05:12:31.703993+00:00",
+    "last_reported": "2026-08-15T05:12:51.587608+00:00",
+    "last_updated": "2026-08-15T05:12:31.703993+00:00",
+    "context": {
+      "id": "01M01XC06QW62JTBDGT445YSH8",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_drying_temperature",
+    "state": "65",
+    "attributes": {
+      "drying_time_hours": 8,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 2 drying temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.704688+00:00",
+    "last_reported": "2026-08-15T05:12:51.587723+00:00",
+    "last_updated": "2026-08-15T05:12:31.704688+00:00",
+    "context": {
+      "id": "01M01XC06R3NS9XWS77RQP36DP",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_filament",
+    "state": "PETG",
+    "attributes": {
+      "vendor": "Snapmaker",
+      "sub_type": "HF",
+      "official": true,
+      "sku": 13007,
+      "soft": false,
+      "user_editable": false,
+      "present": true,
+      "in_use": true,
+      "assigned_colors": [
+        2,
+        5
+      ],
+      "color": "#D3232A",
+      "colors": [
+        "#D3232A"
+      ],
+      "color_count": 1,
+      "color_mode": 0,
+      "alpha": 255,
+      "argb": 4292027178,
+      "argb_color": "#D3232A",
+      "gradient": false,
+      "color_mismatch": false,
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 2 filament"
+    },
+    "last_changed": "2026-08-15T05:12:31.703688+00:00",
+    "last_reported": "2026-08-15T05:12:51.587533+00:00",
+    "last_updated": "2026-08-15T05:12:31.703688+00:00",
+    "context": {
+      "id": "01M01XC06QAC9DR3BQEZZG8PBJ",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_job_filament_estimated",
+    "state": "unknown",
+    "attributes": {
+      "source": "slicer_estimate",
+      "filename": "u1-four-color-demo.gcode",
+      "grams_per_color": {},
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 2 job filament, estimated"
+    },
+    "last_changed": "2026-08-15T05:12:31.704304+00:00",
+    "last_reported": "2026-08-15T05:12:51.587667+00:00",
+    "last_updated": "2026-08-15T05:12:31.704304+00:00",
+    "context": {
+      "id": "01M01XC06RACWCCKCJC75NANP3",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_recommended_nozzle_temperature",
+    "state": "245",
+    "attributes": {
+      "first_layer": 250,
+      "hotend_min": 230,
+      "hotend_max": 270,
+      "bed_temp": 70,
+      "bed_type": 1,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 2 recommended nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.704918+00:00",
+    "last_reported": "2026-08-15T05:12:51.587785+00:00",
+    "last_updated": "2026-08-15T05:12:31.704918+00:00",
+    "context": {
+      "id": "01M01XC06RQX4YHYG04G2V8DG5",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_scan_state",
+    "state": "idle",
+    "attributes": {
+      "friendly_name": "u1sim Slot 2 scan state"
+    },
+    "last_changed": "2026-08-15T05:12:31.705263+00:00",
+    "last_reported": "2026-08-15T05:12:51.587825+00:00",
+    "last_updated": "2026-08-15T05:12:31.705263+00:00",
+    "context": {
+      "id": "01M01XC06SN1J6N9VZ854N3CT9",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_spool_weight",
+    "state": "1000",
+    "attributes": {
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 2 spool weight"
+    },
+    "last_changed": "2026-08-15T05:12:31.704484+00:00",
+    "last_reported": "2026-08-15T05:12:51.587692+00:00",
+    "last_updated": "2026-08-15T05:12:31.704484+00:00",
+    "context": {
+      "id": "01M01XC06RHN9BB9B3D2Z14RY0",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_tag_manufactured",
+    "state": "20260220",
+    "attributes": {
+      "manufacturer": "Snapmaker",
+      "card_uid": [
+        200,
+        12,
+        91,
+        74
+      ],
+      "protocol_version": 1,
+      "rsa_key_version": 1,
+      "tray": 1,
+      "diameter": null,
+      "length": null,
+      "sku": 13007,
+      "official": true,
+      "vendor": "Snapmaker",
+      "filament_type": "PETG",
+      "sub_type": "HF",
+      "color": "#D3232A",
+      "colors": [
+        "#D3232A"
+      ],
+      "multi_mode": 0,
+      "friendly_name": "u1sim Slot 2 tag manufactured"
+    },
+    "last_changed": "2026-08-15T05:12:31.705059+00:00",
+    "last_reported": "2026-08-15T05:12:51.587813+00:00",
+    "last_updated": "2026-08-15T05:12:31.705059+00:00",
+    "context": {
+      "id": "01M01XC06ST758JY9DPM9QNFZ3",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_2_vendor",
+    "state": "Snapmaker",
+    "attributes": {
+      "sku": 13007,
+      "official": true,
+      "friendly_name": "u1sim Slot 2 vendor"
+    },
+    "last_changed": "2026-08-15T05:12:31.703849+00:00",
+    "last_reported": "2026-08-15T05:12:51.587577+00:00",
+    "last_updated": "2026-08-15T05:12:31.703849+00:00",
+    "context": {
+      "id": "01M01XC06QX68FXJ35HF7QNA6C",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_assigned_colors",
+    "state": "1",
+    "attributes": {
+      "colors": [
+        3
+      ],
+      "color_map": [
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "friendly_name": "u1sim Slot 3 assigned colors"
+    },
+    "last_changed": "2026-08-15T05:12:31.706215+00:00",
+    "last_reported": "2026-08-15T05:12:51.588015+00:00",
+    "last_updated": "2026-08-15T05:12:31.706215+00:00",
+    "context": {
+      "id": "01M01XC06TPQX33QHMKM0KYJ72",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_color",
+    "state": "#1E88E5",
+    "attributes": {
+      "color": "#1E88E5",
+      "colors": [
+        "#1E88E5",
+        "#43A047"
+      ],
+      "color_count": 2,
+      "color_mode": 1,
+      "alpha": 255,
+      "argb": 4280191205,
+      "argb_color": "#1E88E5",
+      "gradient": true,
+      "color_mismatch": false,
+      "icon": "mdi:palette",
+      "friendly_name": "u1sim Slot 3 color"
+    },
+    "last_changed": "2026-08-15T05:12:31.706061+00:00",
+    "last_reported": "2026-08-15T05:12:51.587980+00:00",
+    "last_updated": "2026-08-15T05:12:31.706061+00:00",
+    "context": {
+      "id": "01M01XC06TGVZRQHTXYG65FEHM",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_drying_temperature",
+    "state": "unknown",
+    "attributes": {
+      "drying_time_hours": null,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 3 drying temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.706731+00:00",
+    "last_reported": "2026-08-15T05:12:51.588051+00:00",
+    "last_updated": "2026-08-15T05:12:31.706731+00:00",
+    "context": {
+      "id": "01M01XC06TMA3EJVP2JRRKFB29",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_filament",
+    "state": "PLA",
+    "attributes": {
+      "vendor": "Generic",
+      "sub_type": "Silk",
+      "official": false,
+      "sku": null,
+      "soft": false,
+      "user_editable": true,
+      "present": true,
+      "in_use": true,
+      "assigned_colors": [
+        3
+      ],
+      "color": "#1E88E5",
+      "colors": [
+        "#1E88E5",
+        "#43A047"
+      ],
+      "color_count": 2,
+      "color_mode": 1,
+      "alpha": 255,
+      "argb": 4280191205,
+      "argb_color": "#1E88E5",
+      "gradient": true,
+      "color_mismatch": false,
+      "icon": "mdi:printer-3d-nozzle",
+      "friendly_name": "u1sim Slot 3 filament"
+    },
+    "last_changed": "2026-08-15T05:12:31.705745+00:00",
+    "last_reported": "2026-08-15T05:12:51.587899+00:00",
+    "last_updated": "2026-08-15T05:12:31.705745+00:00",
+    "context": {
+      "id": "01M01XC06SP7BDD6CY0KRR9AKN",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_job_filament_estimated",
+    "state": "unknown",
+    "attributes": {
+      "source": "slicer_estimate",
+      "filename": "u1-four-color-demo.gcode",
+      "grams_per_color": {},
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 3 job filament, estimated"
+    },
+    "last_changed": "2026-08-15T05:12:31.706389+00:00",
+    "last_reported": "2026-08-15T05:12:51.588028+00:00",
+    "last_updated": "2026-08-15T05:12:31.706389+00:00",
+    "context": {
+      "id": "01M01XC06TEH0NN7HETE417SEM",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_recommended_nozzle_temperature",
+    "state": "unknown",
+    "attributes": {
+      "first_layer": null,
+      "hotend_min": null,
+      "hotend_max": null,
+      "bed_temp": null,
+      "bed_type": null,
+      "unit_of_measurement": "\u00b0C",
+      "device_class": "temperature",
+      "friendly_name": "u1sim Slot 3 recommended nozzle temperature"
+    },
+    "last_changed": "2026-08-15T05:12:31.706902+00:00",
+    "last_reported": "2026-08-15T05:12:51.588064+00:00",
+    "last_updated": "2026-08-15T05:12:31.706902+00:00",
+    "context": {
+      "id": "01M01XC06TC47WRAJ2K6CATARP",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_scan_state",
+    "state": "idle",
+    "attributes": {
+      "friendly_name": "u1sim Slot 3 scan state"
+    },
+    "last_changed": "2026-08-15T05:12:31.707142+00:00",
+    "last_reported": "2026-08-15T05:12:51.588084+00:00",
+    "last_updated": "2026-08-15T05:12:31.707142+00:00",
+    "context": {
+      "id": "01M01XC06V5XF4MQJ7B40AWCNC",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_spool_weight",
+    "state": "unknown",
+    "attributes": {
+      "unit_of_measurement": "g",
+      "device_class": "weight",
+      "friendly_name": "u1sim Slot 3 spool weight"
+    },
+    "last_changed": "2026-08-15T05:12:31.706556+00:00",
+    "last_reported": "2026-08-15T05:12:51.588040+00:00",
+    "last_updated": "2026-08-15T05:12:31.706556+00:00",
+    "context": {
+      "id": "01M01XC06T29TRHT0X9NASZG27",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_tag_manufactured",
+    "state": "unknown",
+    "attributes": {
+      "friendly_name": "u1sim Slot 3 tag manufactured"
+    },
+    "last_changed": "2026-08-15T05:12:31.707032+00:00",
+    "last_reported": "2026-08-15T05:12:51.588074+00:00",
+    "last_updated": "2026-08-15T05:12:31.707032+00:00",
+    "context": {
+      "id": "01M01XC06VMY31Y7ZFWTZV25YV",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_slot_3_vendor",
+    "state": "Generic",
+    "attributes": {
+      "sku": null,
+      "official": false,
+      "friendly_name": "u1sim Slot 3 vendor"
+    },
+    "last_changed": "2026-08-15T05:12:31.705913+00:00",
+    "last_reported": "2026-08-15T05:12:51.587946+00:00",
+    "last_updated": "2026-08-15T05:12:31.705913+00:00",
+    "context": {
+      "id": "01M01XC06S6ZFEEJKDRTXMD2QN",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "sensor.u1sim_total_duration",
+    "state": "28.335",
+    "attributes": {
+      "unit_of_measurement": "s",
+      "device_class": "duration",
+      "friendly_name": "u1sim Total duration"
+    },
+    "last_changed": "2026-08-15T05:12:51.586303+00:00",
+    "last_reported": "2026-08-15T05:12:51.586303+00:00",
+    "last_updated": "2026-08-15T05:12:51.586303+00:00",
+    "context": {
+      "id": "01M01XCKM2HA2K5EA6WHPZN3GZ",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "switch.u1sim_auto_replenish_filament",
+    "state": "on",
+    "attributes": {
+      "friendly_name": "u1sim Auto replenish filament"
+    },
+    "last_changed": "2026-08-15T05:12:31.707717+00:00",
+    "last_reported": "2026-08-15T05:12:51.588130+00:00",
+    "last_updated": "2026-08-15T05:12:31.707717+00:00",
+    "context": {
+      "id": "01M01XC06VTW3NNYTQVCR968CA",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "switch.u1sim_filament_entangle_detection",
+    "state": "on",
+    "attributes": {
+      "friendly_name": "u1sim Filament entangle detection"
+    },
+    "last_changed": "2026-08-15T05:12:31.707836+00:00",
+    "last_reported": "2026-08-15T05:12:51.588139+00:00",
+    "last_updated": "2026-08-15T05:12:31.707836+00:00",
+    "context": {
+      "id": "01M01XC06VM2VDP7W5ASV8VB19",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "switch.u1sim_replenish_ignoring_color",
+    "state": "off",
+    "attributes": {
+      "friendly_name": "u1sim Replenish ignoring color"
+    },
+    "last_changed": "2026-08-15T05:12:31.707948+00:00",
+    "last_reported": "2026-08-15T05:12:51.588146+00:00",
+    "last_updated": "2026-08-15T05:12:31.707948+00:00",
+    "context": {
+      "id": "01M01XC06V8BVXN9SQSHEGHFJX",
+      "parent_id": null,
+      "user_id": null
+    }
+  },
+  {
+    "entity_id": "switch.u1sim_turn_off_led_at_the_end",
+    "state": "off",
+    "attributes": {
+      "friendly_name": "u1sim Turn off LED at the end"
+    },
+    "last_changed": "2026-08-15T05:12:31.708048+00:00",
+    "last_reported": "2026-08-15T05:12:51.588152+00:00",
+    "last_updated": "2026-08-15T05:12:31.708048+00:00",
+    "context": {
+      "id": "01M01XC06WCRK4K695PHHFCZ5K",
+      "parent_id": null,
+      "user_id": null
+    }
+  }
+]

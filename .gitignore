@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Runtime scratch from the simulator and from Moonraker
+*.log
+*.sock
+run/
+comms/
+gcodes/
+printer_data/
+
+# A Moonraker checkout for docker-compose.yml lives here and is not ours.
+vendor/
+
+# artifacts/ is the opposite of scratch: it is the captured proof that the
+# integration was driven through a real Moonraker, and the test suite reads it.
+# The logs in there are part of that record, so they beat the *.log rule above.
+!artifacts/**/*.log
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store

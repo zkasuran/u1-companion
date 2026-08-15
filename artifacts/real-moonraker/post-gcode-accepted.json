@@ -1,0 +1,7 @@
+{
+  "script": "SET_PRINT_EXTRUDER_MAP CONFIG_EXTRUDER=7 MAP_EXTRUDER=2",
+  "http_status": 200,
+  "body": {
+    "result": "ok"
+  }
+}

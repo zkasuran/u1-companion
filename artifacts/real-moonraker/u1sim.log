@@ -1,0 +1,4 @@
+2026-08-15 10:29:11,112 INFO u1sim listening on /tmp/u1-companion-proof/run/klippy.sock
+2026-08-15 10:29:11,113 INFO u1sim 0.1.0 ready. scenario=four_color_print speed=1.0 objects=32
+2026-08-15 10:29:11,113 INFO u1sim scenario: {"name": "four_color_print", "description": "Three official Snapmaker spools scanned by RFID plus one hand entered dual colour silk, six logical colours mapped onto four heads, then a multicolour print with tool changes, a pause and a clean finish.", "source": "/home/asuran/Downloads/hackathon-hq/work/snapmaker-u1/u1-companion/u1sim/scenarios/four_color_print.json", "loop": true, "duration": 285.0, "step_count": 31}
+2026-08-15 10:29:11,249 INFO u1sim client 1 connected

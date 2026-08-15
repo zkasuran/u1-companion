@@ -1,0 +1,36 @@
+# Moonraker, run straight from the Snapmaker fork with no patches.
+#
+# The image carries only the interpreter and the fork's pinned dependencies.
+# The source itself is bind mounted read only at /opt/moonraker by
+# docker-compose.yml, so what runs is provably the checkout on disk rather than
+# a copy this Dockerfile could have altered.
+FROM python:3.11-slim
+
+LABEL org.opencontainers.image.title="u1-moonraker-runner"
+LABEL org.opencontainers.image.description="Runtime for the unmodified Snapmaker Moonraker fork"
+
+# libsodium is the only shared library the pinned dependency set needs at run
+# time (libnacl binds it with ctypes). iproute2 gives machine.py the `ip`
+# command it shells out to for network state (machine.py:774); without it the
+# log fills with subprocess errors.
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y libsodium23 iproute2 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY docker/requirements-moonraker.txt /tmp/requirements-moonraker.txt
+RUN pip install --no-cache-dir -r /tmp/requirements-moonraker.txt
+
+COPY docker/entrypoint-moonraker.sh /usr/local/bin/entrypoint-moonraker.sh
+COPY docker/healthcheck-moonraker.py /usr/local/bin/healthcheck-moonraker.py
+RUN chmod +x /usr/local/bin/entrypoint-moonraker.sh /usr/local/bin/healthcheck-moonraker.py
+
+ENV PYTHONUNBUFFERED=1
+ENV MOONRAKER_SRC=/opt/moonraker
+# One data directory shared with the u1sim container, the way a real U1 has one
+# printer_data that both Klipper and Moonraker live in.
+ENV MOONRAKER_DATA_PATH=/data
+ENV MOONRAKER_CONFIG_PATH=/config/moonraker.conf
+ENV MOONRAKER_TMP_DIR=/tmp/moonraker
+
+EXPOSE 7125
+ENTRYPOINT ["/usr/local/bin/entrypoint-moonraker.sh"]

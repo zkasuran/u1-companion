@@ -1,0 +1,52 @@
+{
+  "name": "idle_loaded",
+  "description": "A printer sitting in standby with all four slots loaded and the colour map spread over six logical colours. Nothing prints, so a client can be developed against a still picture.",
+  "loop": false,
+  "default_job": {
+    "duration": 600.0,
+    "total_layer": 300,
+    "file_size": 12582912,
+    "filament_mm": 14200.0
+  },
+  "steps": [
+    {"at": 0.0, "action": "set_state", "state": "ready"},
+    {"at": 0.5, "action": "scan_tag", "slot": 0, "tag": {
+      "VERSION": 1, "VENDOR": "Snapmaker", "MANUFACTURER": "Snapmaker",
+      "MAIN_TYPE": "PLA", "SUB_TYPE": "Basic", "TRAY": 1, "ALPHA": 255,
+      "COLOR_NUMS": 1, "RGB_1": 0, "ARGB_COLOR": 4278190080, "WEIGHT": 1000,
+      "DRYING_TEMP": 55, "DRYING_TIME": 8, "HOTEND_MIN_TEMP": 190,
+      "HOTEND_MAX_TEMP": 240, "BED_TYPE": 1, "BED_TEMP": 60,
+      "FIRST_LAYER_TEMP": 215, "OTHER_LAYER_TEMP": 210, "SKU": 12001,
+      "MF_DATE": "20260114", "RSA_KEY_VERSION": 1, "OFFICIAL": true,
+      "CARD_UID": [4, 210, 17, 32]
+    }},
+    {"at": 1.0, "action": "scan_tag", "slot": 1, "tag": {
+      "VERSION": 1, "VENDOR": "Snapmaker", "MANUFACTURER": "Snapmaker",
+      "MAIN_TYPE": "PLA", "SUB_TYPE": "Matte", "TRAY": 1, "ALPHA": 255,
+      "COLOR_NUMS": 1, "RGB_1": 16117985, "ARGB_COLOR": 4294308065,
+      "WEIGHT": 1000, "DRYING_TEMP": 55, "DRYING_TIME": 8,
+      "HOTEND_MIN_TEMP": 190, "HOTEND_MAX_TEMP": 240, "BED_TYPE": 1,
+      "BED_TEMP": 60, "FIRST_LAYER_TEMP": 215, "OTHER_LAYER_TEMP": 205,
+      "SKU": 12042, "MF_DATE": "20260203", "RSA_KEY_VERSION": 1,
+      "OFFICIAL": true, "CARD_UID": [17, 96, 44, 8]
+    }},
+    {"at": 1.5, "action": "scan_tag", "slot": 2, "tag": {
+      "VERSION": 1, "VENDOR": "Snapmaker", "MANUFACTURER": "Snapmaker",
+      "MAIN_TYPE": "PETG", "SUB_TYPE": "HF", "TRAY": 1, "ALPHA": 255,
+      "COLOR_NUMS": 1, "RGB_1": 13837098, "ARGB_COLOR": 4292027178,
+      "WEIGHT": 1000, "DRYING_TEMP": 65, "DRYING_TIME": 8,
+      "HOTEND_MIN_TEMP": 230, "HOTEND_MAX_TEMP": 270, "BED_TYPE": 1,
+      "BED_TEMP": 70, "FIRST_LAYER_TEMP": 250, "OTHER_LAYER_TEMP": 245,
+      "SKU": 13007, "MF_DATE": "20260220", "RSA_KEY_VERSION": 1,
+      "OFFICIAL": true, "CARD_UID": [200, 12, 91, 74]
+    }},
+    {"at": 2.0, "action": "set_filament", "slot": 3, "vendor": "Generic",
+     "type": "PLA", "sub_type": "Silk", "color_nums": 2, "multi_mode": 1,
+     "alpha": 255, "colors": ["1E88E5", "43A047"]},
+    {"at": 2.5, "action": "set_color_map", "logical": 4, "head": 1},
+    {"at": 3.0, "action": "set_color_map", "logical": 5, "head": 2},
+    {"at": 3.5, "action": "preferences", "auto_replenish_filament": 1,
+     "filament_entangle_detect": 1, "filament_entangle_sen": "high",
+     "replenish_ignore_color": 0, "end_led_turn_off": 0}
+  ]
+}

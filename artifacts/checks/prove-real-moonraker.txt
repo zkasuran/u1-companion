@@ -1,0 +1,40 @@
+== starting real Moonraker from /home/asuran/Downloads/hackathon-hq/work/snapmaker-u1/u1-companion/../_recon/u1-moonraker
+== Moonraker is up and has no Klippy yet
+   klippy_connected: False  klippy_state: disconnected
+== starting u1sim on /tmp/u1-companion-proof/run/klippy.sock
+== Moonraker reports klippy_state ready
+== capturing, watching the websocket for 32s
+wrote artifacts/real-moonraker/server-info.json (1033 bytes)
+wrote artifacts/real-moonraker/printer-info.json (553 bytes)
+wrote artifacts/real-moonraker/objects-list.json (876 bytes)
+wrote artifacts/real-moonraker/query-print_task_config.json (4152 bytes)
+wrote artifacts/real-moonraker/query-filament_detect.json (4123 bytes)
+wrote artifacts/real-moonraker/query-wanted-objects.json (12198 bytes)
+wrote artifacts/real-moonraker/post-gcode-accepted.json (132 bytes)
+wrote artifacts/real-moonraker/post-gcode-refused.json (2400 bytes)
+wrote artifacts/real-moonraker/query-after-gcode.json (574 bytes)
+wrote artifacts/real-moonraker/ws-subscribe-reply.json (12273 bytes)
+wrote artifacts/real-moonraker/ws-status-updates.json (61249 bytes)
+wrote artifacts/real-moonraker/query-wanted-objects-final.json (12683 bytes)
+PASS klippy_connected
+PASS klippy_state ready
+PASS no failed Moonraker components
+PASS no Moonraker startup warnings
+PASS no missing klippy requirements
+PASS print_task_config listed
+PASS filament_detect listed
+PASS the first query landed before the scenario scanned a spool
+PASS filament_vendor has 4 slots
+PASS filament_color_rgba has 4 slots
+PASS filament_color_multi has 4 slots
+PASS extruder_map_table has 32 entries
+PASS a colour remap over HTTP was accepted
+PASS the remap reached the printer state
+PASS an out of range remap was refused
+PASS subscribe returned print_task_config
+PASS at least one push arrived
+PASS print_task_config changed in a push
+PASS filament_detect changed in a push
+60 notify_status_update frames in 32s
+objects seen in pushes: display_status, extruder, extruder1, extruder2, extruder3, filament_detect, heater_bed, machine_state_manager, print_stats, print_task_config, toolhead, virtual_sdcard
+== artifacts in /home/asuran/Downloads/hackathon-hq/work/snapmaker-u1/u1-companion/artifacts/real-moonraker
